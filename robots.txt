@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: .gitignore
+Disallow: /.git
+Disallow: /css
+Disallow: /fonts
+Disallow: /js
+Disallow: /videos
+Disallow: /contact-success.html
+Noindex: /contact-success.html
+
+Sitemap: http://yuppii.gr/sitemap.xml
+Sitemap: https://yuppii.gr/sitemap.xml
