@@ -1,37 +1,55 @@
-// @@@@@@@@@@@@@@@@@@@@
-// @@@@ ALL PAGES @@@@@
-// @@@@@@@@@@@@@@@@@@@@
-
-// #### GET YEAR SCRIPT ####
-$('#year').text(new Date().getFullYear());
-
-// POPOVERS INITIALIZATION
-$('[data-toggle="popover"]').popover();
-
-// #### BACK TO TOP FUNCTIONALITY ####
-const backToTopBtn = document.querySelector('.backToTop');
-window.onscroll = function() {showBackToTop()};
-
-function showBackToTop() {
-	if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-		backToTopBtn.style.bottom = "20px";
-	}
-	else {
-		backToTopBtn.style.bottom = "-100px";
-	}
-}
-
-function backToTop() {
-	document.documentElement.scrollTo({
-		top: 0,
-		behavior: 'smooth'
-	})
-}
-
-// #### LANGUAGE PICKER ####
+const now = new Date();
 const selectedLangFlag = document.querySelector(".selected-lang");
 const dropDownItems = document.querySelectorAll(".dropdown-item");
 const dropDownMenu = document.querySelector(".dropdown-menu");
+
+// #### CAROUSEL OPTIONS ####
+$('#yuppiiShowcaseCarousel').carousel({
+	interval: 5000,
+	keyboard: true,
+	pause: false,
+	ride: 'carousel',
+	wrap: true,
+	touch: true
+});
+
+// #### CHANGE FIRST ITEM DATA-INTERVAL BASED ON SCREEN WIDTH ####
+if(document.querySelector('#yuppiiShowcaseCarousel')) {
+	document.addEventListener('DOMContentLoaded', () => {
+		carouselConfigure();
+		this.addEventListener('resize', carouselConfigure);
+	});
+	
+	const carouselConfigure = () => {
+		const yuppiiCarousel = document.querySelector('#yuppiiShowcaseCarousel');
+		const firstCarouselItem = document.querySelector('.carousel-image-0');
+		
+		if(this.innerWidth > 768) {
+			firstCarouselItem.setAttribute('data-interval', 25000);
+			yuppiiCarousel.classList.add('carousel-fade');
+		} else {
+			firstCarouselItem.setAttribute('data-interval', 5000);
+			yuppiiCarousel.classList.remove('carousel-fade');
+		}
+	};
+}
+
+// #### BACK TO TOP FUNCTIONALITY ####
+document.addEventListener('scroll', () => {
+	const backToTopBtn = document.querySelector('.backToTop');
+	
+	if(window.scrollY > 250) {
+		backToTopBtn.style.bottom = '20px';
+		backToTopBtn.addEventListener('click', () => {
+			this.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			})
+		})
+	} else {
+		backToTopBtn.style.bottom = '-100px';
+	}
+});
 
 // On page load, check if screen width is less than 768px
 // If true, add class dropdown-menu-right to dropdown-meu
@@ -43,138 +61,50 @@ window.onload = function() {
 
 window.addEventListener("resize", function() {
 	if (window.matchMedia("(max-width: 768px)").matches) {
-    console.log("Screen width is 768px or lower")
 		dropDownMenu.classList.add("dropdown-menu-right");
-  } 
-	else {
-    console.log("Screen less than 768px or higher");
+  } else {
 		dropDownMenu.classList.remove("dropdown-menu-right");
   }
 })
 
-dropDownItems.forEach(function(clickedEl) {
-	clickedEl.addEventListener("click", function() {
-		let clickedImgSrc = clickedEl.querySelector('.lang').getAttribute("src");
-		selectedLangFlag.src = clickedImgSrc;
+dropDownItems.forEach(item => {
+	item.addEventListener("click", () => {
+		let clickedImgSrc = item.querySelector('.lang').getAttribute("src");
+		selectedLangFlag.setAttribute('src', clickedImgSrc);
 	})
 })
 
-// @@@@@@@@@@@@@@@@@@@@@
-// @@@@ INDEX.HTML @@@@@
-// @@@@@@@@@@@@@@@@@@@@@
-// #### CAROUSEL OPTIONS ####
-$('#yuppiiShowcaseCarousel').carousel({
-	interval: 5000,
-	keyboard: true,
-	pause: false,
-	ride: 'carousel',
-	wrap: true,
-	touch: true
+// When modals hide, fade in backToTop button
+$("#gamesModal, #partiesModal, #coffeeModal, #tripsModal").on("hide.bs.modal", function() {
+	$(".backToTop").fadeIn();
 });
 
-const gameModal = document.getElementById('gamesModal');
-const partiesModal = document.getElementById('partiesModal');
-const coffeeModal = document.getElementById('coffeeModal');
-const tripsModal = document.getElementById('tripsModal');
+// When modals show, fade out backToTop button
+$("#gamesModal, #partiesModal, #coffeeModal, #tripsModal").on("show.bs.modal", function() {
+	$(".backToTop").fadeOut();
+});
 
-if(gameModal && partiesModal && coffeeModal && tripsModal) {
-	// When modals hide, fade in backToTop button
-	$("#gamesModal").on("hide.bs.modal", function(event) {
-		$(".backToTop").fadeIn();
-	});
-	$("#partiesModal").on("hide.bs.modal", function(event) {
-		$(".backToTop").fadeIn();
-	});
-	$("#coffeeModal").on("hide.bs.modal", function(event) {
-		$(".backToTop").fadeIn();
-	});
-	$("#tripsModal").on("hide.bs.modal", function(event) {
-		$(".backToTop").fadeIn();
-	});
+// When modal hides, fade in backToTop button & game selection button
+$("#gameSelection").on("hide.bs.modal", function() {
+	$(".game-selection-btn").fadeIn();
+	$(".backToTop").fadeIn();
+});
 
-	// When modals show, fade out backToTop button
-	$("#gamesModal").on("show.bs.modal", function(event) {
-		$(".backToTop").fadeOut();
-	});
-	$("#partiesModal").on("show.bs.modal", function(event) {
-		$(".backToTop").fadeOut();
-	});
-	$("#coffeeModal").on("show.bs.modal", function(event) {
-		$(".backToTop").fadeOut();
-	});
-	$("#tripsModal").on("show.bs.modal", function(event) {
-		$(".backToTop").fadeOut();
-	});
-}
+// When modal shows, fade out backToTop button & game selection button
+$("#gameSelection").on("show.bs.modal", function() {
+	$(".game-selection-btn").fadeOut();
+	$(".backToTop").fadeOut();
+});
 
-// #### CHANGE FIRST ITEM DATA-INTERVAL BASED ON SCREEN WIDTH ####
-(function($) {
-	const $window = $(window);
-	function dataIntervalChange() {
-		if($window.width() < 768) {
-			$('.carousel-image-0').attr('data-interval', 5000);
-			$('#yuppiiShowcaseCarousel').removeClass('carousel-fade');
-		}
-		else {
-			$('.carousel-image-0').attr('data-interval', 25000);
-			$('#yuppiiShowcaseCarousel').addClass('carousel-fade');
-		}
-	}
-	$window.resize(dataIntervalChange).trigger('resize');
-})(jQuery);
-
-// @@@@@@@@@@@@@@@@@@@@
-// @@@@ PARK.HTML @@@@@
-// @@@@@@@@@@@@@@@@@@@@
-
-
-// @@@@@@@@@@@@@@@@@@@@
-// @@@@ GAMES.HTML @@@@
-// @@@@@@@@@@@@@@@@@@@@
-// #### MODAL BUTTON AND MODAL LOGIC ####
-const gamesSelectionBtn = document.querySelector('.game-selection-btn');
-const gamesModal = document.getElementById('gameSelection');
-
-if(gamesSelectionBtn && gamesModal) {
-	// When modal hides, fade in backToTop button & game selection button
-	$("#gameSelection").on("hide.bs.modal", function(event) {
-		$(".game-selection-btn").fadeIn();
-		$(".backToTop").fadeIn();
-	});
-
-	// When modal shows, fade out backToTop button & game selection button
-	$("#gameSelection").on("show.bs.modal", function(event) {
-		$(".game-selection-btn").fadeOut();
-		$(".backToTop").fadeOut();
-	});
-}
 
 function closeModal() {
-	setTimeout(function() {
+	setTimeout(() => {
 		$("#gameSelection").modal("hide");
 	}, 50);
 }
 
-// @@@@@@@@@@@@@@@@@@@@@@
-// @@@@ CONTACT.HTML @@@@
-// @@@@@@@@@@@@@@@@@@@@@@
-// INPUT GROUP RESIZE
-(function($) {
-	const $window = $(window);
-	const inputGroup = document.querySelectorAll(".input-group");
-	
-	function toggleLgClasses() {
-		if($window.width() < 400) {
-			for(var i = 0; i < inputGroup.length; i++) {
-				inputGroup[i].classList.remove("input-group-lg");
-			}
-		}
-		else {
-			for(var i = 0; i < inputGroup.length; i++) {
-				inputGroup[i].classList.add("input-group-lg");
-			}
-		}
-	}
-	
-	$window.resize(toggleLgClasses).trigger('resize');
-})(jQuery);
+// POPOVERS INITIALIZATION
+$('[data-toggle="popover"]').popover();
+
+// GET CURRENT YEAR
+document.querySelector('#year').textContent = now.getFullYear();
