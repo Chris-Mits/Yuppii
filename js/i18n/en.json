@@ -1,0 +1,389 @@
+{
+  "tab-title": {
+    "home": "Yuppii Luna Park | Home",
+    "park": "Yuppii Luna Park | The Park",
+    "games": "Yuppii Luna Park | Games",
+    "services": "Yuppii Luna Park | Services",
+    "contact": "Yuppii Luna Park | Contact"
+  },
+  
+  "nav": {
+    "home": "Home",
+    "park": "Park",
+    "games": "Games",
+    "services": "Services",
+    "contact": "Contact",
+    "greek": "Greek",
+    "english": "English"
+  },
+  
+  "carousel1" : {
+    "title": "Have fun at Yuppii",
+    "lead": "Have fun at the amusement park of Alexandroupoli! Come and have fun together in a fairytale reality!"
+  },
+  
+  "carousel2" : {
+    "title": "Yuppii Games",
+    "lead": "A multitude of unique games for young and old friends in a safe environment"
+  },
+  
+  "carousel3" : {
+    "title": "Yuppii Beverages & Snacks",
+    "lead": "And as long as the children play safely, parents can enjoy their drinks!"
+  },
+  
+  "activities": {
+    "title": "Game without limits in Yuppii Luna Park",
+    "lead": "An unforgettable experience awaits at Alexandroupoli Yuppii Luna Park"
+  },
+  
+  "cards1": {
+    "title": "Our Games",
+    "lead": "A multitude of unique games for young and old friends in a safe environment",
+    "btn": "More"
+  },
+  
+  "cards2": {
+    "title": "Children parties",
+    "lead": "Birthday parties, Name day parties, Holiday parties, and much more",
+    "btn": "More"
+  },
+  
+  "cards3": {
+    "title": "Our Café",
+    "lead": "Relax while your children play. We offer a full menu with snacks and drinks",
+    "btn": "More"
+  },
+  
+  "cards4": {
+    "title": "School Trips",
+    "lead": "Plan your trip at Yuppii for an amazing experience with your friends & classmates",
+    "btn": "More"
+  },
+  
+  "covid": {
+    "title": "Our visitors health and safety is our top priority",
+    "lead": "The health and safety of our visitors, team members and staff is and will continue to be our number one priority."
+  },
+  
+  "covid-info1": {
+    "entry1": "Minor visitors (4 - 17 years old) can submit a negative self test statement",
+    "entry2": "All adult visitors must show proof of at least one in the following:",
+    "entry3": "Covid Vaccination certificate",
+    "entry4": "Covid Disease certificate",
+    "entry5": "Negative test (PCR/Rapid)"
+  },
+  
+  "covid-info2": {
+    "entry1": "For your convenience and safety, strategically placed hand sanitizers are available throughout Yuppii Luna Park so you can clean your hands frequently using hand sanitizer. All frequently touched surfaces are disinfected daily and with increased frequency by specialized personnel."
+  },
+  
+  "covid-info3": {
+    "entry1": "For everyone's safety, please follow the instructions on the signs and ground markings to maintain a natural distance."
+  },
+  
+  "gallery": {
+    "title": "Photo gallery",
+    "lead": "Get a taste of the magical world of Yuppii Luna Park"
+  },
+  
+  "footer": {
+    "follow": "#Follow Us On Social Media",
+    "operate1": "We operate",
+    "operate2": "Summer Season",
+    "operate3": "Christmas Season",
+    "operate4": "National Holidays",
+    "operate5": "Hours",
+    "operate6": "Daily 6pm - 12am",
+    "operate7": "The weather",
+    "operate8": "Feels Like:",
+    "operate9": "Humidity:",
+    "operate10": "Location",
+    "operate11": "Under Alexandroupoli Lighthouse"
+  },
+  
+  "gamesModal": {
+    "modal-title": "Games",
+    "modal-lead": "Yuppii Luna Park is the best place for your children to have fun while you relax or play with them, and you can find it under the lighthouse, on the coastal side of Alexandroupoli. It has over 40 unique and different games from all around the world and can accommodate all ages",
+    "modal-btn": "More"
+  },
+  
+  "partiesModal": {
+    "modal-title": "Children parties",
+    "modal-lead": "Plan your child's party at Yuppii Luna Park. It is the ideal place for children of all ages to have fun as well as to have a good time with friends and guests. The park offers a variety of games and a full menu of food, drinks and beverages. Contact us here to discuss your event whether it is a birthday party, name day party, Christmas party, or any other occasion you have in mind to celebrate.",
+    "modal-btn": "More"
+  },
+  
+  "coffeeModal": {
+    "modal-title": "Our Café",
+    "modal-lead": "Enjoy a delicious break and cool off with a refreshment in the specially designed area of ​​our Café. Our menu includes a wide variety of sandwiches, toasts, hamburgers, hot dogs, fried potatoes, boiled corn, popcorn, ice cream, soft drinks, sorbets, beers, drinks, coffees and many other delicious snacks",
+    "modal-btn": "More"
+  },
+  
+  "tripsModal": {
+    "modal-title": "School trips",
+    "modal-lead": "Yuppii Luna Park normally opens in the afternoon, however especially for groups and school trips the park can be opened from the morning by phone. Call us or contact us here. We offer a variety of discounts depending on the size of the group (10+ people, 10-19 people, 20-29 people, 30+ people). Come and have a great time at Yuppii Luna Park.",
+    "modal-btn": "More"
+  },
+  
+  "park": {
+    "header": {
+      "title": "A few words about Yuppii Luna Park",
+      "lead": "Under the Lighthouse of Alexandroupolis, Yuppii Luna Park is waiting for you for an unforgettable experience."
+    },
+    "info": {
+      "title": "Counting 10 years of operation",
+      "lead": "Yuppii first opened its doors in 2011 and has a variety of unique games for our young but also older friends. Yuppii Luna Park is located in the busiest summer area, the coastal Alexandroupolis. It operates in an area of 5,500 sq.m. in the Port of Alexandroupolis just below the Lighthouse. The park has ISO, complies with all safety standards and is certified by ELOT-EBETAM. All Yuppii staff members are experienced and specialized. Relax while your kids play or have fun with them at Yuppii Luna Park."
+    },
+    "info2": {
+      "title": "Admission to Yuppii is free!",
+      "lead": "Our main operating season is from March 25 to September 30. We operate again during the Christmas season as well as on National Holidays. Also, out of season, we might operate during weekends depending on weather conditions. Our hours are from 6pm - 12am. whilst during parades of National Holidays we operate from the morning. Come and have fun together in a fairytale reality! We are waiting for you for an unforgettable experience."
+    },
+    "map": "Yuppii Map",
+    "reasons": {
+      "header": {
+        "title": "5 reasons to visit Yuppii Luna Park!",
+        "lead": "Especially for our younger friends, Yuppii Luna Park offers adventure, enjoyment and memories that will last a lifetime, so it is no surprise that children love it. However, there are more benefits than one would expect. Read below and you will find five reasons why this form of entertainment is really good for body and soul for everyone!"
+      },
+      "reason1": {
+        "title": "A different world",
+        "lead": "Have you ever dreamed of traveling to another world? At Yuppii Luna Park, you can leave your daily life behind and be transported to a place of fantasy and fun! Here you will be able to take part in the world of fairies, pirates, clowns, astronauts among others! You could even be an explorer in a world of wonders or in a familiar fairy tale. Surrounded by joy and happiness, you can immerse yourself in the imagination for as long as you are there"
+      },
+      "reason2": {
+        "title": "Escape from daily stress",
+        "lead": "Real life can be hectic and stressful at times. At Yuppii Luna Park, just forget about the problems or work of the next day, enjoy and live the moment. According to clinical psychologist Judy Kurianski, brisk walks can be a way out when you feel anxious because they expose you to \"good fear\". So while you may get a little nervous in advance, a crash ride can be really healing, especially if you put all your worries and anxieties aside for a while!"
+      },
+      "reason3": {
+        "title": "Strengthen the bonds",
+        "lead": "Spending time with friends and family is a good way to strengthen bonds between you, and where better to do it than Yuppii Luna Park? Think about it: you can share the adventure with your loved ones and create lasting memories with the people you love. The next time you plan a weekend away, think about Yuppii Luna Park and don't forget to invite all your friends and family!"
+      },
+      "reason4": {
+        "title": "Burn calories",
+        "lead": "… In more than one way! While it may be known as a \"park\" - sometimes referring to images of soft grass and benches - Yuppii Luna Park covers a fairly large area, about 5,500 square meters. Because of this size, it takes a lot of walking to explore all of the activities and games. Therefore, you usually end up walking much farther than you think, sometimes up to a few kilometers. We do not notice it because we are not focused on how far we are going, except on all the fun things we can do! Can you think of a more enjoyable way to lose weight?"
+      },
+      "reason5": {
+        "title": "An excuse to become a child",
+        "lead": "That, by far, is the best reason for adults. Just because our kids go to amusement parks does not mean we have to be adults all the time. What is so amazing about Yuppii Luna Park is that it enables us to release our childlike side and get in touch with this childish sense of fun and joy. In fact, Yuppii encourages us to become children too, to have fun and make the most of the opportunity to forget the outside world in which we have to be responsible and just live this magical moment. Too often we forget how amazing it is to be a child so let's not forget that there is a place in Alexandroupoli that not only encourages us, but also gives us an excuse to become a child again!"
+      }
+    }
+  },
+  
+  "games": {
+    "header": {
+      "title": "Game in Yuppii",
+      "lead": "The entertainment in Alexandroupolis has a name and is called Yuppii Luna Park. With over 40 unique and different games from around the world, it can accommodate all ages"
+    },
+    "game-selection-btn": "Select Game",
+    
+    "game-selection-pills": {
+      "title": "Select a game from the list",
+      "inflatables": "Inflatables",
+      "playground": "Playground",
+      "trampoline": "Trampoline",
+      "cinema7d": "Cinema 7D",
+      "dryslope": "Dryslope",
+      "bumpercars": "Bumper Cars",
+      "junior": "Junior Playground",
+      "formulacars": "Formula Cars",
+      "horses": "Ponies",
+      "train": "Train",
+      "cranes": "Cranes",
+      "carnivalgames": "Carnival Games",
+      "tablesoccer": "Table Soccer",
+      "basket": "Basket",
+      "kiddyrides": "Kiddy Rides",
+      "simulators": "Simulators"
+    },
+    
+    "inflatables": {
+      "header": {
+        "title": "Inflatables",
+        "lead": "Come with us play, slide and climb on our inflatable toys! An endless inflatable world. A perfect experience"
+      }
+    },
+    
+    "playground": {
+      "header": {
+        "title": "Playground",
+        "lead": "A huge playground! Slides, tunnels, mazes, bridges, obstacles, ponds of balls, all in a safe environment for your children, ready to explore…"
+      }
+    },
+    
+    "trampoline": {
+      "header": {
+        "title": "Trampoline",
+        "lead": "You jump high to the sky, you make figures and everyone - parents and friends - will be left with their mouths open by the aerial tricks you do!"
+      }
+    },
+    
+    "cinema7d": {
+      "header": {
+        "title": "Cinema 7D",
+        "lead": "Inside the Yuppii Luna Park there is a Cinema that will drive young and old crazy !!! Welcome to the next generation of movie screening! Take your company and have fun watching authentic movies in high resolution and great graphics"
+      }
+    },
+    
+    "dryslope": {
+      "header": {
+        "title": "Dryslope",
+        "lead": "Take the special tube, go up and feel the adrenaline rushing red as you go down the slide!"
+      }
+    },
+    
+    "bumpercars": {
+      "header": {
+        "title": "Bumper Cars",
+        "lead": "Crashing safely is the name of this game… Choose the bumper car you like and crash your friends!"
+      }
+    },
+    
+    "junior": {
+      "header": {
+        "title": "Junior Playground",
+        "lead": "Swings, balls, slides, cars and a large pond with balls in a safe kid's playground next to our Café for your child to have fun, while you enjoy your coffee or food"
+      }
+    },
+    
+    "formulacars": {
+      "header": {
+        "title": "Formula Cars",
+        "lead": "It's about time to see who is the fastest! Choose your formula and overtake your friends!"
+      }
+    },
+    
+    "horses": {
+      "header": {
+        "title": "Ponies",
+        "lead": "Our ponies are appropriately designed for young and old children. The child rides the horse as if it was normal, and takes a stroll in the amusement park with his friends. He will remember it forever"
+      }
+    },
+    
+    "train": {
+      "header": {
+        "title": "Train",
+        "lead": "The train goes for a ride with our little friends… Various wagons on a controlled railway that will make your children's ride unforgettable"
+      }
+    },
+    
+    "cranes": {
+      "header": {
+        "title": "Cranes",
+        "lead": "The first under construction theme park in Greece is waiting for you at Yuppii!"
+      }
+    },
+    
+    "carnivalgames": {
+      "header": {
+        "title": "Carnival Games",
+        "lead": "Are you ready to 'reel' and 'aim' for the coolest gift? Luck is on your side!"
+      }
+    },
+    
+    "tablesoccer": {
+      "header": {
+        "title": "Table Soccer",
+        "lead": "The wooden table soccer game that entertained generations could not be missing from our park!"
+      }
+    },
+    
+    "basket": {
+      "header": {
+        "title": "Basket",
+        "lead": "Pick a ball and start shooting! And who knows, a scouter might see your talent and invite you in his team!"
+      }
+    },
+    
+    "kiddyrides": {
+      "header": {
+        "title": "Kiddy Rides",
+        "lead": "Rocking carts, carousel, horses, mugs and gorillas in various colors and designs that will drive our little friends crazy"
+      }
+    },
+    
+    "simulators": {
+      "header": {
+        "title": "Simulators",
+        "lead": "Mark Nemo well with the water, hit the fish or overtake your opponent! Achieve your goal to play on the next tracks!"
+      }
+    },
+    
+    "testimonials": {
+      "header": {
+        "title": "Your Comments",
+        "lead": "Yuppii Luna Park has hosted thousands of young and old friends. Check out some of their comments!"
+      },
+      
+      "testimonial1": "It is a wonderful place, amazing service, very kind staff, the girls in the playground are incredible with all the children, my little one loves them very much. I was very happy because it aims to have a good time for the children and the parents. Time to play!!!",
+      
+      "testimonial2": "Very good Amusement Park where you can find everything! Even a virtual reality booth with chairs that 'scare' and twist the subject you see with the 3D glasses accordingly! Horses, carousels, collisions, boats, electronics and everything you need you will find there! Prices are normal.",
+      
+      "testimonial3": "Nicely designed and child friendly place! There are activities that are rare even in large urban centers! Shelter for the relaxation of children! Friendly and helpful staff with priority on safety when having fun!",
+      
+      "testimonial4": "Large space with several toys for children, depending on their age. It has large inflatables for the smaller ones. Normal prices for Amusement Parks.",
+      
+      "testimonial5": "Affordable prices, very helpful staff and pleasant! Wide variety of activities, I highly recommend it!",
+      
+      "testimonial6": "Nice park, for children under 10 years old. High number of staff members so you can relax while your children plays.",
+      
+      "testimonial7": "A very good place to relax while your children are playing!! To tell you truth, the park invites you to become child again!!",
+      
+      "testimonial8": "Joy and fun, very good place for spree! A wonderful playground in the heart of the city by the sea!",
+      
+      "testimonial9": "Great location with lots of games for young and old. Kind staff and low prices!"
+    }
+  },
+  
+  "services": {
+    "cafe":{
+      "title": "Café",
+      "lead": "Relax and have a drink, while your children play. We have a complete menu of snacks, drinks and beverages.",
+      "lead2": "Enjoy a tasty break or cool off with a refreshment in the specially designed area of ​​our Café. Our menu includes a wide variety of sandwiches, toasts, hamburgers, hot dogs, finger foods such as french fries, boiled corn, popcorn, ice cream, refreshments, sorbets, beers, drinks as well as a list of soft drinks, and a selection of coffee varieties and other drinks and snacks."
+    },
+    
+    "parties": {
+      "title": "Parties & Events",
+      "lead": "Contact us to plan your event, your children's party or any other similar festivity event.",
+      "lead2": "Organize your party or any festive event at Yuppii Luna Park! You can let us know the number of guests so that the appropriate table reservations can be made."
+    },
+    
+    "sales": {
+      "title": "Toys Rentals - Sales",
+      "lead": "Are you interested in renting, buying or importing children's toys? We have the solution!",
+      "part1": "Our company, after many years of research in various exhibitions in Greece, Europe, Asia and America, specializes in the sale of children's toys, offering you the best state-of-the-art toys from around the world at the best",
+      "part2": "prices",
+      "part3": "of the market.",
+      "part4": "Contact directly",
+      "part5": "George Mokalis",
+      "part6": "if you are interested in renting, buying or importing children's toys, to guide you and help you make the most profitable choices."
+    }
+  },
+  
+  "contact": {
+    "header": {
+      "title": "Contact us",
+      "lead": "Fill out the form below to contact us for information or questions about Yuppii Luna Park or to tell us how you spent your time during your recent visit!"
+    },
+    
+    "form": {
+      "title": "Fill out this form to contact us",
+      "valid": "It looks okay!",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Mobile Phone",
+      "message": "Your message...",
+      "nameinvalid": "The name must be between 5-15 characters, without spaces",
+      "emailinvalid": "Enter a valid email address",
+      "phoneinvalid": "Enter a valid mobile phone number",
+      "submit": "Submit"
+    },
+    
+    "info": {
+      "loc1": "Location",
+      "loc2": "Under Alexandroupolis Lighthouse",
+      "email1": "Email",
+      "email2": "yuppiilunapark@gmail.com",
+      "phone1": "Phone",
+      "phone2": "+306973433980"
+    }
+  }
+}

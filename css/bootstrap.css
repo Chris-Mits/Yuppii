@@ -2611,9 +2611,8 @@ input[type="button"].btn-block {
   border: 0; }
   .dropdown-item:hover, .dropdown-item:focus {
     color: #16181b;
-    text-decoration: none;
-    background-color: #e9ecef; }
-  .dropdown-item.active, .dropdown-item:active {
+    text-decoration: none; }
+  .dropdown-item.active {
     color: #fff;
     text-decoration: none;
     background-color: #007bff; }
@@ -4690,9 +4689,9 @@ a.close.disabled {
     height: 0.5rem;
     margin: 0 0.3rem; }
     .popover .arrow::before, .popover .arrow::after {
+      content: "";
       position: absolute;
       display: block;
-      content: "";
       border-color: transparent;
       border-style: solid; }
 
@@ -8035,3 +8034,5 @@ a.text-yuppii2:hover, a.text-yuppii2:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
+
+/*# sourceMappingURL=bootstrap.css.map */

@@ -1,8 +1,6 @@
 User-agent: *
 Disallow: .gitignore
 Disallow: /.git
-Disallow: /contact-success.html
-Noindex: /contact-success.html
 
 Sitemap: http://yuppii.gr/sitemap.xml
 Sitemap: https://yuppii.gr/sitemap.xml

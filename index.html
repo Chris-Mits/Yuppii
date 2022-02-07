@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="el">
+<html>
 <head>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -30,18 +30,9 @@
 	
 	<!-- CUSTOM CSS -->
 	<link rel="stylesheet" href="css/style.css" />
-		
-	<!-- MY JS FILE -->
-	<script 
-		defer  
-		type="text/javascript" 
-		src="js/app.js"></script>
 	
-	<!-- CUSTOM WEATHER API (FOOTER ALL PAGES) -->
-	<script defer src="js/weather/weather.js"></script>
-	<script defer src="js/weather/storage.js"></script>
-	<script defer src="js/weather/ui.js"></script>
-	<script defer src="js/weather/app.js"></script>
+	<!-- CUSTOM JS + MODULES -->
+	<script type="module" src="js/app.js"></script>
 	
 	<!-- MAPBOX API & CUSTOM OPTIONS JS -->
 	<script
@@ -51,7 +42,7 @@
 		defer
 		src="js/mapbox.js"></script>
 	
-	<title>Yuppii Luna Park | Αρχική</title>
+	<title data-lang="tab-title.home">Yuppii Luna Park | Αρχική</title>
 </head>
 <body>
 	<!-- ##### BACK TO TOP BUTTON ##### -->
@@ -73,25 +64,25 @@
 				class="navbar-toggler"
 				data-toggle="collapse"
 				data-target="#navbarCollapse">
-				<span class="navbar-toggler-icon"></span>
+				<i class="fas fa-bars"></i>
 			</button>
 			
 			<div id="navbarCollapse" class="collapse navbar-collapse">
-				<ul class="navbar-nav ml-auto">
+				<ul class="navbar-nav ml-auto" data-lang="nav.menu">
 					<li class="nav-item mr-lg-1 active">
-						<a href="index.html" class="nav-link">Αρχική</a>
+						<a href="index.html" class="nav-link" data-lang="nav.home">Αρχική</a>
 					</li>
 					<li class="nav-item mx-lg-1">
-						<a href="park.html" class="nav-link">Το Πάρκο</a>
+						<a href="park.html" class="nav-link" data-lang="nav.park">Πάρκο</a>
 					</li>
 					<li class="nav-item mx-lg-1">
-						<a href="games.html" class="nav-link">Παιχνίδια</a>
+						<a href="games.html" class="nav-link" data-lang="nav.games">Παιχνίδια</a>
 					</li>
 					<li class="nav-item mx-lg-1">
-						<a href="services.html" class="nav-link">Παροχές</a>
+						<a href="services.html" class="nav-link" data-lang="nav.services">Παροχές</a>
 					</li>
 					<li class="nav-item mx-lg-1">
-						<a href="contact.html" class="nav-link">Επικοινωνία</a>
+						<a href="contact.html" class="nav-link" data-lang="nav.contact">Επικοινωνία</a>
 					</li>
 				</ul>
 			</div>
@@ -104,25 +95,26 @@
 					data-toggle="dropdown" 
 					aria-expanded="false">
 					<img 
-						class="selected-lang" 
-						src="./images/content/svg_icons/lang/gr.svg" 
-						alt="Language Flag" /> <i class="fas fa-angle-down"></i>
+						class="default-lang" 
+						src="./images/content/svg_icons/lang/el.svg" 
+						alt="Current Language" />
 				</a>
 				
-				<div class="dropdown-menu" aria-labelledby="languages">
-					<a class="dropdown-item" href="#">
+				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="languages">
+					<div class="dropdown-item d-flex align-items-center el-outer">
 						<img 
-							class="lang" 
-							src="./images/content/svg_icons/lang/gr.svg" 
-							alt="Greek Language" />Ελληνικά
-					</a>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="#">
+							class="lang el" 
+							src="./images/content/svg_icons/lang/el.svg" 
+							alt="Greek Language" />
+						<p class="m-0 el" data-lang="nav.greek">Ελληνικά</p>	
+					</div>
+					<div class="dropdown-item d-flex align-items-center en-outer">
 						<img 
-							class="lang" 
-							src="./images/content/svg_icons/lang/gb.svg" 
-							alt="English Language" />English
-					</a>
+							class="lang en" 
+							src="./images/content/svg_icons/lang/en.svg" 
+							alt="English Language" />
+						<p class="m-0 en" data-lang="nav.english">Aγγλικά</p>	
+					</div>
 				</div>
 			</div>
 		
@@ -189,11 +181,11 @@
 				<div class="carousel-item carousel-image-1">
 					<div class="overlay d-none d-sm-block">
 						<div class="container">
-							<div class="carousel-caption d-none d-sm-block text-left mb-5">
-								<h1 class="display-3">
+							<div class="carousel-caption d-none d-sm-block text-left mb-5" data-lang="carousel1.header">
+								<h1 class="display-3" data-lang="carousel1.title">
 									Διασκεδάστε στο Yuppii
 								</h1>
-								<p class="lead">
+								<p class="lead" data-lang="carousel1.lead">
 									Διασκεδάστε στο λούνα παρκ της Αλεξανδρούπολης! Ελάτε να διασκεδάσουμε όλοι μαζί σε μια παραμυθένια πραγματικότητα!!! Σας περιμένουμε για μια αξέχαστη εμπειρία
 								</p>
 							</div>
@@ -206,11 +198,11 @@
 				<div class="carousel-item carousel-image-3">
 					<div class="overlay d-none d-sm-block">
 						<div class="container">
-							<div class="carousel-caption d-none d-sm-block text-left mb-5">
-								<h1 class="display-3">
+							<div class="carousel-caption d-none d-sm-block text-left mb-5" data-lang="carousel2.header">
+								<h1 class="display-3" data-lang="carousel2.title">
 									Παιχνίδι στο Yuppii
 								</h1>
-								<p class="lead">
+								<p class="lead" data-lang="carousel2.lead">
 									Mοναδικά παιχνίδια για μικρούς και μεγάλους σε ένα ασφαλές περιβάλλον
 								</p>
 							</div>
@@ -223,12 +215,12 @@
 				<div class="carousel-item carousel-image-5">
 					<div class="overlay d-none d-sm-block">
 						<div class="container">
-							<div class="carousel-caption d-none d-sm-block text-left mb-5">
-								<h1 class="display-3">
-									Yuppii Coffees & Snacks
+							<div class="carousel-caption d-none d-sm-block text-left mb-5" data-lang="carousel3.header">
+								<h1 class="display-3" data-lang="carousel3.title">
+									Yuppii Ροφήματα & Snacks
 								</h1>
-								<p class="lead">
-									Και όσο τα παιδιά παίζουν με ασφάλεια, οι γονείς απολαμβάνουν το καφεδάκι τους... και όχι μόνο!
+								<p class="lead" data-lang="carousel3.lead">
+									Και όσο τα παιδιά παίζουν με ασφάλεια, οι γονείς απολαμβάνουν το ρόφημά τους
 								</p>
 							</div>
 						</div>
@@ -263,11 +255,11 @@
 			<!-- SECTION HEADER -->
 			<div class="row">
 				<div class="col">
-					<div class="info-header mb-5">
-						<h1 class="text-yuppii2 pb-3">
+					<div class="info-header mb-5" data-lang="activities.header">
+						<h1 class="text-yuppii2 pb-3" data-lang="activities.title">
 							Παιχνίδι δίχως όρια στο Yuppii Luna Park
 						</h1>
-						<p class="lead">
+						<p class="lead" data-lang="activities.lead">
 							Tο Λούνα Παρκ της Αλεξανδρούπολης σας περιμένει για μια αξέχαστη εμπειρία
 						</p>
 					</div>
@@ -282,16 +274,17 @@
 							loading="lazy"
 							class="card-img-top" 
 							src="images/content/yuppii_summer_2021/ΣΥΓΚΡΟΥΟΜΕΝΑ/ALE_8846.webp" />
-						<div class="card-body">
-								<h3 class="card-title">Παιχνίδια</h3>
-								<p class="card-text">
+						<div class="card-body" data-lang="cards1.header">
+								<h3 class="card-title" data-lang="cards1.title">Τα Παιχνίδια</h3>
+								<p class="card-text" data-lang="cards1.lead">
 									Mοναδικά παιχνίδια από όλο τον κόσμο, για μικρούς και μεγάλους σε ένα ασφαλές περιβάλλον
 								</p>
 								<a 
 									class="btn btn-yuppii1 btn-block btn-lg" 
 									href="#"
 									data-toggle="modal" 
-									data-target="#gamesModal">
+									data-target="#gamesModal"
+									data-lang="cards1.btn">
 									Περισσότερα
 								</a>
 						</div>
@@ -302,16 +295,19 @@
 							loading="lazy"
 							class="card-img-top" 
 							src="images/content/yuppii_summer_2021/ΣΑΛΑ/kids_party.webp" />
-						<div class="card-body">
-								<h3 class="card-title">Παιδικά Πάρτυ</h3>
-								<p class="card-text">
+						<div class="card-body" data-lang="cards2.header">
+								<h3 class="card-title" data-lang="cards2.title">
+									Παιδικά Πάρτυ
+								</h3>
+								<p class="card-text" data-lang="cards2.lead">
 									Πάρτυ γενεθλίων, ονομαστικής γιορτής, Χριστουγέννων, κλείσιμου σχολείων
 								</p>
 								<a 
 									class="btn btn-yuppii1 btn-block btn-lg" 
 									href="#"
 									data-toggle="modal" 
-									data-target="#partiesModal">
+									data-target="#partiesModal"
+									data-lang="cards2.btn">
 									Περισσότερα
 								</a>
 						</div>
@@ -322,16 +318,19 @@
 							loading="lazy" 
 							class="card-img-top" 
 							src="images/content/yuppii_summer_2021/ΚΑΝΤΙΝΑ/ALE_8669.webp" />
-						<div class="card-body">
-								<h3 class="card-title">Το Café μας</h3>
-								<p class="card-text">
+						<div class="card-body" data-lang="cards3.header">
+								<h3 class="card-title" data-lang="cards3.title">
+									Το Café μας
+								</h3>
+								<p class="card-text" data-lang="cards3.lead">
 									Χαλαρώστε ενώ τα παιδιά σας παίζουν. Διαθέτουμε πλήρες μενού με snack και ροφήματα
 								</p>
 								<a 
 									class="btn btn-yuppii1 btn-block btn-lg" 
 									href="#"
 									data-toggle="modal" 
-									data-target="#coffeeModal">
+									data-target="#coffeeModal"
+									data-lang="cards3.btn">
 									Περισσότερα
 								</a>
 						</div>
@@ -342,16 +341,19 @@
 							loading="lazy" 
 							class="card-img-top" 
 							src="images/content/yuppii_summer_2021/ΕΙΣΟΔΟΣ/ALE_8440.webp" />
-						<div class="card-body">
-								<h3 class="card-title">Σχολικές Εκδρομές</h3>
-								<p class="card-text">
+						<div class="card-body" data-lang="cards4.header">
+								<h3 class="card-title" data-lang="cards4.title">
+									Σχολικές Εκδρομές
+								</h3>
+								<p class="card-text" data-lang="cards4.lead">
 									Προγραμματίστε την εκδρομή σας στο Υuppii Luna Park για μια Yuppii εμπειρία με τους συμμαθητές σας
 								</p>
 								<a 
 									class="btn btn-yuppii1 btn-block btn-lg" 
 									href="#"
 									data-toggle="modal" 
-									data-target="#tripsModal">
+									data-target="#tripsModal"
+									data-lang="cards4.btn">
 									Περισσότερα
 								</a>
 						</div>
@@ -370,11 +372,11 @@
 			
 			<div class="row text-center">
 				<div class="col">
-					<div class="info-header mb-5">
-						<h1 class="text-yuppii1 pb-3">
+					<div class="info-header mb-4" data-lang="covid.">
+						<h1 class="text-yuppii1 pb-3" data-lang="covid.title">
 							Προτεραιότητά μας, η υγεία και η ασφάλειά όλων
 						</h1>
-						<p class="lead">
+						<p class="lead" data-lang="covid.lead">
 							Η υγεία και η ασφάλεια των επισκεπτών, των μελών της ομάδος και του προσωπικού μας είναι και θα συνεχίσει να είναι η νούμερο ένα προτεραιότητά μας.
 						</p>
 					</div>
@@ -389,20 +391,32 @@
 						src="images/content/svg_icons/covid/certificate_check.svg" 
 						alt="Mask" />
 				</div>
-				<div class="col-md-8">
-					<p class="lead m-0 text-sm-left text-justify">
+				
+				<div class="col-md-8" data-lang="covid-info1.">
+					<div class="lead m-0 text-sm-left text-justify" data-lang="covid-info1.entry1">
+						Οι ανήλικοι επισκέπτες από τεσσάρων εώς και δεκαεπτά ετών, μπορούν εναλλακτικά να προσκομίζουν δήλωση αρνητικού αυτοδιαγνωστικού ελέγχου (Self Test).
+					</div>
+					<div class="lead m-0 text-sm-left text-justify mb-1" data-lang="covid-info1.entry2">
 						Οι ενήλικοι επισκέπτες που εισέρχονται πρέπει υποχρεωτικά να επιδεικνύουν ένα από τα ακόλουθα:
-						<span class="text-left"><i class="fas fa-chevron-right"></i> Πιστοποιητικό εμβολιασμού </span> 
-						<span class="text-left"><i class="fas fa-chevron-right"></i> Πιστοποιητικό νόσησης </span> 
-						<span class="text-left"><i class="fas fa-chevron-right"></i> Βεβαίωση αρνητικού διαγνωστικού ελέγχου για κορωνοϊό (PCR ή Rapid Test) </span>
-						Οι ανήλικοι επισκέπτες από τεσσάρων εώς και δεκαεπτά ετών, μπορούν εναλλακτικά να προσκομίζουν δήλωση αρνητικού αυτοδιαγνωστικού ελέγχου (Self Test)
-					</p>
+					</div>
+					<div class="d-flex justify-content-start align-items-center">
+						<i class="fas fa-file-alt mr-2"></i>
+						<span class="lead font-weight-bold" data-lang="covid-info1.entry3">Πιστοποιητικό εμβολιασμού</span>
+					</div>
+					<div class="d-flex justify-content-start align-items-center">
+						<i class="fas fa-file-alt mr-2"></i>
+						<span class="lead font-weight-bold" data-lang="covid-info1.entry4">Πιστοποιητικό νόσησης</span>
+					</div>
+					<div class="d-flex justify-content-start align-items-center">
+						<i class="fas fa-file-alt mr-2"></i>
+						<span class="lead font-weight-bold" data-lang="covid-info1.entry5">Αρνητικό τέστ (PCR/Rapid)</span>
+					</div>
 				</div>
 			</div>
 			
 			<div class="row justify-content-center align-items-center py-4">
-				<div class="col-md-8 order-2 order-md-1">
-					<p class="lead m-0 text-sm-right text-justify">
+				<div class="col-md-8 order-2 order-md-1" data-lang="covid-info2.">
+					<p class="lead m-0 text-sm-right text-justify" data-lang="covid-info2.entry1">
 						Για την ευκολία και την ασφάλειά σας, στρατηγικά τοποθετημένες συσκευές απολύμανσης χεριών βρίσκονται σε όλους τους χώρους του Yuppii Luna Park για να μπορείτε να καθαρίζετε συχνά τα χέρια σας χρησιμοποιώντας απολυμαντικό χεριών. Όλες οι επιφάνειες συχνής αφής απολυμαίνονται καθημερινά και με αυξημένη συχνότητα από εξειδικευμένο προσωπικό.
 					</p>
 				</div>
@@ -423,8 +437,8 @@
 						src="images/content/svg_icons/covid/users_2m.svg" 
 						alt="Distance" />
 				</div>
-				<div class="col-md-8">
-					<p class="lead m-0 text-sm-left text-justify">
+				<div class="col-md-8" data-lang="covid-info3.">
+					<p class="lead m-0 text-sm-left text-justify" data-lang="covid-info3.entry1">
 						Για την ασφάλειά όλων παρακαλούμε να ακολουθείτε τις οδηγίες στις πινακίδες και τις επισημάνσεις εδάφους για να διατηρήσετε μια φυσική απόσταση.
 					</p>
 				</div>
@@ -441,11 +455,11 @@
 			
 			<div class="row text-center">
 				<div class="col">
-					<div class="info-header mb-5">
-						<h1 class="text-yuppii2 pb-3">
+					<div class="info-header mb-5" data-lang="gallery.">
+						<h1 class="text-yuppii2 pb-3" data-lang="gallery.title">
 							Γκαλερί φωτογραφιών
 						</h1>
-						<p class="lead">
+						<p class="lead" data-lang="gallery.lead">
 							Πάρτε μια μικρή γεύση απο τον μαγικό κόσμο του Yuppii Luna Park
 						</p>
 					</div>
@@ -453,7 +467,7 @@
 			</div>
 			
 			
-			<div class="pswp-gallery pswp-gallery--single-column">
+			<div class="home-gallery">
 				
 				<!-- ### First Gallery Row ### -->
 				<div class="row mb-md-3 mb-1">
@@ -672,14 +686,14 @@
 	
 	<!-- ##### FOOTER ##### -->
 	<footer id="main-footer">
-		<div class="container">
+		<div class="container" data-lang="footer.">
 			
 			<!-- First Row -->
 			<div class="row py-3">
 				
 				<div class="col d-flex justify-content-lg-between justify-content-center align-items-center flex-wrap">
-					<h3 class="text-uppercase text-lg-left text-center mb-resp-social mb-0">
-						Ακολουθηστε Μας Στα Social Media
+					<h3 class="text-uppercase text-lg-left text-center mb-resp-social mb-0" data-lang="footer.follow">
+						#Ακολουθηστε Μας Στα Social Media
 					</h3>
 
 					<ul class="list-inline list-unstyled p-0 mb-0">
@@ -717,24 +731,24 @@
 				</div>
 
 				<div class="col-lg-3 d-flex flex-column justify-content-between align-items-lg-start align-items-center text-lg-left text-center mb-resp">
-					<h4 class="text-uppercase m-0">
+					<h4 class="text-uppercase m-0" data-lang="footer.operate1">
 						Λειτουργουμε
 					</h4>
 					<ul class="list-unstyled mb-2 mb-resp">
-						<li>Θερινή Σεζόν</li>
-						<li>Χριστουγεννιάτικη Σεζόν</li>
-						<li>Εθνικές Εορτές</li>
+						<li data-lang="footer.operate2">Θερινή Σεζόν</li>
+						<li data-lang="footer.operate3">Χριστουγεννιάτικη Σεζόν</li>
+						<li data-lang="footer.operate4">Εθνικές Εορτές</li>
 					</ul>
-					<h4 class="text-uppercase m-0">
+					<h4 class="text-uppercase m-0" data-lang="footer.operate5">
 						Ωραριο
 					</h4>
-					<ul class="list-unstyled mb-0">
-						<li>Καθημερινά 6 μ.μ. - 12 π.μ.</li>
+					<ul class="list-unstyled mb-0" data-lang="footer.operate6">
+						<li>Καθημερινά 6μμ - 12πμ</li>
 					</ul>
 				</div>
 				
-				<div class="col-lg-2 d-flex flex-column justify-content-between align-items-lg-start align-items-center text-lg-left text-center mb-resp weather-col">
-					<h4 class="text-uppercase m-0">
+				<div class="col-lg-3 d-flex flex-column justify-content-between align-items-lg-start align-items-center text-lg-left text-center mb-resp weather-col">
+					<h4 class="text-uppercase m-0" data-lang="footer.operate7">
 						Ο Καιρος
 					</h4>
 					<ul class="list-unstyled mb-0">
@@ -746,17 +760,21 @@
 								<img id="w-icon" class="m-0 ml-1 img-fluid">
 							</li>
 						</div>
-						<li id="w-feels-like"></li>
-						<li id="w-humidity"></li>
+						<li>
+							<span data-lang="footer.operate8">Αίσθηση:</span><span id="w-feels-like"></span>
+						</li>
+						<li>
+							<span data-lang="footer.operate9">Υγρασία:</span><span id="w-humidity"></span>
+						</li>
 					</ul>
 				</div>
 				
-				<div class="col-lg-5 d-flex flex-column justify-content-between align-items-lg-start align-items-center text-lg-left text-center map-col">
-					<h4 class="text-uppercase m-0">
-						Θα Μας Βρειτε
+				<div class="col-lg-4 d-flex flex-column justify-content-between align-items-lg-start align-items-center text-lg-left text-center map-col">
+					<h4 class="text-uppercase m-0" data-lang="footer.operate10">
+						Τοποθεσία
 					</h4>
 					<ul class="list-unstyled mb-0">
-						<li>Κάτω απο τον Φάρο Αλεξανδρούπολης</li>
+						<li data-lang="footer.operate11">Κάτω απο τον Φάρο Αλεξανδρούπολης</li>
 					</ul>
 					<div id="footer-map"></div>
 				</div>
@@ -771,45 +789,8 @@
 						&copy; <span id="year"></span> Yuppii Luna Park
 					</h5>
 					<h5 class="mb-0">
-						Website Creation By 
-						<a
-							tabindex="0"
-							role="button"
-							data-html="true"
-							data-toggle="popover"
-							data-trigger="focus"
-							data-placement="top"
-							data-template="
-								<div class='custom popover' role='tooltip'>
-									<div class='arrow'></div>
-									<h3 class='popover-header'></h3>
-									<div class='popover-body'></div>
-								</div>
-							"
-							data-content="
-								<div class='card-body bg-dark text-white m-0 p-1'>
-									<h4 class='card-title m-0 p-0'>
-										<img src='images/mits.webp' alt='Chris Mits' />
-										Γειά σου👋👋
-									</h4>
-									<p class='card-text'>
-										Σου αρέσει αυτό που βλέπεις?<br>
-										Επικοινώνησε μαζί μου
-									</p>
-									<p class='phone m-0 p-0'>
-										<a class='m-0 p-0 text-white' href='mailto:chrismits88@gmail.com' target='_blank'>
-											📧 chrismits88@gmail.com
-										</a>
-									</p>
-									<p class='email m-0 p-0'>
-										<a class='m-0 p-0 text-white' href='tel:+306973993703'>
-											📱 6973993703
-										</a>
-									</p>
-								</div>
-							">
-							Chris Mits
-						</a>
+						Website Creation By
+						<a id="mits-popover" data-toggle="popover" tabindex="0" role="button">Chris Mits</a>
 					</h5>
 				</div>
 			
@@ -823,17 +804,22 @@
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h2 class="modal-title">
-						<img src="images/content/svg_icons/Carousel.svg" alt="Carousel" />
+					<img class="mr-2" src="images/content/svg_icons/Carousel.svg" alt="Carousel" />
+					<h2 class="modal-title" data-lang="gamesModal.modal-title">
 						Παιχνίδια
 					</h2>
 					<button class="close" data-dismiss="modal">&times;</button>
 				</div>
-				<div class="modal-body lead text-justify text-sm-left">
-					 Το Yuppii Luna Park ειναι μονόδρομος για την διασκέδαση των παιδιών σας και θα το βρείτε κάτω από τον Φάρο, στην παραλιακή της Αλεξανδρούπολης. Διαθέτει πάνω από 40 μοναδικά και διαφορετικά παιχνίδια από όλο τον κόσμο και μπορεί να φιλοξενήσει όλες τις ηλικίες
+				<div class="modal-body lead text-justify text-sm-left" data-lang="gamesModal.modal-lead">
+					 Το Yuppii Luna Park ειναι μονόδρομος για την διασκέδαση των παιδιών σας Και θα το βρείτε κάτω από τον Φάρο, στην παραλιακή της Αλεξανδρούπολης. Διαθέτει πάνω από 40 μοναδικά και διαφορετικά παιχνίδια από όλο τον κόσμο και μπορεί να φιλοξενήσει όλες τις ηλικίες
 				</div>
 				<div class="modal-footer">
-					<a class="btn btn-yuppii2 btn-lg" href="games.html">Τσέκαρε Το</a>
+					<a 
+						class="btn btn-yuppii2 btn-lg" 
+						href="games.html"
+						data-lang="gamesModal.modal-btn">
+						Τσέκαρε Το
+					</a>
 				</div>
 			</div>
 		</div>
@@ -843,17 +829,22 @@
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h2 class="modal-title">
-						<img src="images/content/svg_icons/Balloons.svg" alt="Balloons" />
+					<img class="mr-2" src="images/content/svg_icons/Balloons.svg" alt="Balloons" />
+					<h2 class="modal-title" data-lang="partiesModal.modal-title">
 						Παιδικά Πάρτυ
 					</h2>
 					<button class="close" data-dismiss="modal">&times;</button>
 				</div>
-				<div class="modal-body lead text-justify text-sm-left">
+				<div class="modal-body lead text-justify text-sm-left" data-lang="partiesModal.modal-lead">
 					Προγραμματίστε το πάρτι του παιδιού σας στο Yuppii Luna Park. Είναι ο ιδανικός χώρος για να διασκεδάσουν παιδιά κάθε ηλικίας καθώς επίσης και για να περάσουν καλά φίλοι και καλεσμένοι. Το πάρκο προσφέρει ποικιλία παιχνιδιών και ένα πλήρες μενού με φαγητά, ποτά και ροφήματα. Επικοινωνήστε μαζί μας εδώ για να συζητήσουμε για την εκδήλωσή σας είτε πρόκειται για πάρτι γενεθλίων, ονομαστικής εορτής, Χριστουγέννων, τέλους σχολικού έτους ή οποιαδήποτε άλλη περίσταση που έχετε κατά νου για να γιορτάσετε.
 				</div>
 				<div class="modal-footer">
-					<a class="btn btn-yuppii2 btn-lg" href="services.html">Τσέκαρε Το</a>
+					<a 
+						class="btn btn-yuppii2 btn-lg" 
+						href="services.html"
+						data-lang="partiesModal.modal-btn">
+						Τσέκαρε Το
+					</a>
 				</div>
 			</div>
 		</div>
@@ -863,17 +854,22 @@
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h2 class="modal-title">
-						<img src="images/content/svg_icons/Drinks.svg" alt="Balloons" />
+					<img class="mr-2" src="images/content/svg_icons/Drinks.svg" alt="Balloons" />
+					<h2 class="modal-title" data-lang="coffeeModal.modal-title">
 						Το Café μας
 					</h2>
 					<button class="close" data-dismiss="modal">&times;</button>
 				</div>
-				<div class="modal-body lead text-justify text-sm-left">
+				<div class="modal-body lead text-justify text-sm-left" data-lang="coffeeModal.modal-lead">
 					Απολαύστε ένα γευστικό διάλειμμα και δροσιστείτε με ένα αναψυκτικό στον ειδικά διαμορφωμένο χώρο του Café μας. Το μενού μας περιλαμβάνει μια μεγάλη ποικιλία από σάντουιτς, τοστ, χάμπουργκερ, χοτ ντογκ, πατάτες, βραστό καλαμπόκι, ποπ κορν, παγωτά, αναψυκτικά, σορμπέ, μπύρες, ποτά, καφέ και πολλά άλλα σνακ.
 				</div>
 				<div class="modal-footer">
-					<a class="btn btn-yuppii2 btn-lg" href="services.html">Τσέκαρε Το</a>
+					<a 
+						class="btn btn-yuppii2 btn-lg" 
+						href="services.html"
+						data-lang="coffeeModal.modal-btn">
+						Τσέκαρε Το
+					</a>
 				</div>
 			</div>
 		</div>
@@ -883,17 +879,22 @@
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h2 class="modal-title">
-						<img src="images/content/svg_icons/School Bus.svg" alt="Balloons" />
+					<img class="mr-2" src="images/content/svg_icons/School Bus.svg" alt="Balloons" />
+					<h2 class="modal-title" data-lang="tripsModal.modal-title">
 						Σχολικές Εκδρομές
 					</h2>
 					<button class="close" data-dismiss="modal">&times;</button>
 				</div>
-				<div class="modal-body lead text-justify text-sm-left">
+				<div class="modal-body lead text-justify text-sm-left" data-lang="tripsModal.modal-lead">
 					Το Yuppii Luna Park υπο φυσιολογικές συνθήκες ανοίγει το απόγευμα, ωστόσο ειδικά για γκρουπ και σχολικές εκδρομές το πάρκο μπορεί να ανοίξει από το πρωί μετά απο τηλεφωνική επικοινωνία. Καλέστε μας ή επικοινωνήστε μαζί μας εδώ. Προσφέρουμε μια ποικιλία εκπτώσεων ανάλογα με το μέγεθος της ομάδας (10+ άτομα, 10-19 άτομα, 20-29 άτομα, 30+ άτομα). Ελάτε να περάσετε υπέροχα στο Yuppii Luna Park.
 				</div>
 				<div class="modal-footer">
-					<a class="btn btn-yuppii2 btn-lg" href="contact.html">Τσέκαρε Το</a>
+					<a 
+						class="btn btn-yuppii2 btn-lg" 
+						href="contact.html"
+						data-lang="tripsModal.modal-btn">
+						Τσέκαρε Το
+					</a>
 				</div>
 			</div>
 		</div>
@@ -916,34 +917,5 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" 
 		integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" 
 		crossorigin="anonymous"></script>
-	
-	<!-- PHOTOSWIPE MODULE IMPORT & OPTIONS -->
-	<script type="module">
-		import PhotoSwipeLightbox from '/js/photoswipe/photoswipe-lightbox.esm.js';
-		
-		const closeBtnSVGString = `
-		<svg aria-hidden="true" class="pswp__icn" width="30" height="30" viewBox="0 0 30 30" fill="none">
-			<path d="M15.0103 0C11.0017 0 7.23316 1.56027 4.39874 4.39336C-1.45255 10.2418 -1.45255 19.758 4.39856 25.6065C7.23298 28.4397 11.0017 30 15.0103 30C19.0187 30 22.7874 28.4397 25.6218 25.6065C31.4731 19.758 31.4731 10.2418 25.6218 4.39336C22.7874 1.56027 19.0187 0 15.0103 0ZM21.7631 21.7495C21.4966 22.0158 21.1475 22.149 20.7983 22.149C20.4493 22.149 20.1 22.0158 19.8338 21.7495L15.0103 16.9285L10.1868 21.7496C9.92033 22.0159 9.57126 22.1491 9.2221 22.1491C8.87302 22.1491 8.52377 22.0159 8.25755 21.7496C7.72467 21.2172 7.72467 20.3537 8.25755 19.8212L13.0809 15L8.25746 10.1788C7.72458 9.64636 7.72458 8.78291 8.25746 8.25036C8.79017 7.71791 9.65403 7.71791 10.1868 8.25036L15.0103 13.0715L19.8335 8.25036C20.3662 7.71791 21.2301 7.71791 21.7629 8.25036C22.2958 8.78282 22.2958 9.64627 21.7629 10.1788L16.9396 15L21.7631 19.8211C22.2959 20.3536 22.2959 21.2171 21.7631 21.7495Z" fill="#F2788F"/>
-		</svg>`;
-		
-		const zoomBtnSVGString = `
-		<svg aria-hidden="true" class="pswp__icn" width="30" height="30" viewBox="0 0 30 30" fill="none">
-			<path d="M13.9416 9.61963C11.6742 9.61963 9.83594 11.4585 9.83594 13.7259C9.83594 15.9937 11.6742 17.8321 13.9416 17.8321C16.2094 17.8321 18.0475 15.9938 18.0475 13.7259C18.0476 11.4585 16.2096 9.61963 13.9416 9.61963ZM15.9257 14.6975H14.7197V15.9035C14.7197 16.3333 14.3714 16.6816 13.9416 16.6816C13.5118 16.6816 13.1635 16.3333 13.1635 15.9035V14.6975H11.9575C11.5276 14.6975 11.1793 14.3492 11.1793 13.9194C11.1793 13.4896 11.5276 13.1413 11.9575 13.1413H13.1635V11.9349C13.1635 11.5051 13.5118 11.1568 13.9416 11.1568C14.3714 11.1568 14.7197 11.5051 14.7197 11.9349V13.1413H15.9257C16.3555 13.1413 16.7038 13.4896 16.7038 13.9194C16.7038 14.3492 16.3557 14.6975 15.9257 14.6975Z" fill="#72CBC2"/>
-			<path d="M15.0007 0C6.71662 0 0.000976562 6.71584 0.000976562 14.9996C0.000976562 23.2834 6.71662 30 15.0006 30C23.2845 30 30.0007 23.2837 30.0007 14.9996C30.0007 6.71555 23.2846 0 15.0007 0ZM22.5448 22.1255C22.3077 22.3632 21.9968 22.4817 21.6858 22.4817C21.3748 22.4817 21.0641 22.3632 20.8265 22.1255L17.412 18.7108C16.4283 19.3971 15.2326 19.8004 13.9423 19.8004C10.5874 19.8004 7.86803 17.0808 7.86803 13.726C7.86803 10.3712 10.5874 7.65175 13.9423 7.65175C17.2971 7.65175 20.0167 10.3712 20.0167 13.7257C20.0167 14.9112 19.6759 16.0166 19.0887 16.9513L22.5447 20.4075C23.0195 20.8818 23.0195 21.6513 22.5448 22.1255Z" fill="#72CBC2"/>
-		</svg>`;
-		
-		const options = {
-			closeSVG: closeBtnSVGString,
-			zoomSVG: zoomBtnSVGString,
-			gallery: '.pswp-gallery',
-			children: 'a',
-			pswpModule: '/js/photoswipe/photoswipe.esm.js',
-			arrowKeys: true,
-			loop: false
-		};
-		
-		const lightbox = new PhotoSwipeLightbox(options);
-		lightbox.init();
-	</script>
 </body>
 </html>

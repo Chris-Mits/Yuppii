@@ -21,10 +21,7 @@ document.addEventListener('DOMContentLoaded', getWeather);
 // 	// Close modal
 // 	$('#locModal').modal('hide');
 // });
-
 function getWeather() {
 	weather.getWeather()
-		.then(results => {
-			ui.paint(results)
-	})
+		.then(results => ui.paint(results));
 }

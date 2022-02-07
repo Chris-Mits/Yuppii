@@ -26,23 +26,8 @@
 	<!-- CUSTOM CSS -->
 	<link rel="stylesheet" href="css/style.css" />
 	
-	<!-- MY JS FILE -->
-	<script 
-		defer 
-		type="text/javascript" 
-		src="js/app.js"></script>
-		
-	<!-- FORM VALIDATION -->
-	<script 
-		defer 
-		type="text/javascript" 
-		src="js/form_validation.js"></script>
-	
-	<!-- CUSTOM WEATHER API (FOOTER ALL PAGES) -->
-	<script defer src="js/weather/weather.js"></script>
-	<script defer src="js/weather/storage.js"></script>
-	<script defer src="js/weather/ui.js"></script>
-	<script defer src="js/weather/app.js"></script>
+	<!-- CUSTOM JS + MODULES -->
+	<script type="module" src="js/app.js"></script>
 	
 	<!-- MAPBOX API & CUSTOM OPTIONS JS -->
 	<script
@@ -52,9 +37,9 @@
 		defer
 		src="js/mapbox.js"></script>
 	
-	<title>Yuppii Luna Park | Επικοινωνία</title>
+	<title data-lang="tab-title.contact">Yuppii Luna Park | Επικοινωνία</title>
 </head>
-<body>
+<body data-lang="contact.">
 	<!-- ##### BACK TO TOP BUTTON ##### -->
 	<button id="backToTop" class="backToTop p-2">
 		<i class="fas fa-chevron-up"></i>
@@ -74,25 +59,25 @@
 				class="navbar-toggler"
 				data-toggle="collapse"
 				data-target="#navbarCollapse">
-				<span class="navbar-toggler-icon"></span>
+				<i class="fas fa-bars"></i>
 			</button>
 			
 			<div id="navbarCollapse" class="collapse navbar-collapse">
-				<ul class="navbar-nav ml-auto">
+				<ul class="navbar-nav ml-auto" data-lang="nav.menu">
 					<li class="nav-item mr-lg-1">
-						<a href="index.html" class="nav-link">Αρχική</a>
+						<a href="index.html" class="nav-link" data-lang="nav.home">Αρχική</a>
 					</li>
 					<li class="nav-item mx-lg-1">
-						<a href="park.html" class="nav-link">Το Πάρκο</a>
+						<a href="park.html" class="nav-link" data-lang="nav.park">Πάρκο</a>
 					</li>
 					<li class="nav-item mx-lg-1">
-						<a href="games.html" class="nav-link">Παιχνίδια</a>
+						<a href="games.html" class="nav-link" data-lang="nav.games">Παιχνίδια</a>
 					</li>
 					<li class="nav-item mx-lg-1">
-						<a href="services.html" class="nav-link">Παροχές</a>
+						<a href="services.html" class="nav-link" data-lang="nav.services">Παροχές</a>
 					</li>
 					<li class="nav-item mx-lg-1 active">
-						<a href="contact.html" class="nav-link">Επικοινωνία</a>
+						<a href="contact.html" class="nav-link" data-lang="nav.contact">Επικοινωνία</a>
 					</li>
 				</ul>
 			</div>
@@ -105,25 +90,26 @@
 					data-toggle="dropdown" 
 					aria-expanded="false">
 					<img 
-						class="selected-lang" 
-						src="./images/content/svg_icons/lang/gr.svg" 
-						alt="Language Flag" /> <i class="fas fa-angle-down"></i>
+						class="default-lang" 
+						src="./images/content/svg_icons/lang/el.svg" 
+						alt="Current Language" />
 				</a>
 				
-				<div class="dropdown-menu" aria-labelledby="languages">
-					<a class="dropdown-item" href="#">
+				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="languages">
+					<div class="dropdown-item d-flex align-items-center el-outer">
 						<img 
-							class="lang" 
-							src="./images/content/svg_icons/lang/gr.svg" 
-							alt="Greek Language" />Ελληνικά
-					</a>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="#">
+							class="lang el" 
+							src="./images/content/svg_icons/lang/el.svg" 
+							alt="Greek Language" />
+						<p class="m-0 el" data-lang="nav.greek">Ελληνικά</p>	
+					</div>
+					<div class="dropdown-item d-flex align-items-center en-outer">
 						<img 
-							class="lang" 
-							src="./images/content/svg_icons/lang/gb.svg" 
-							alt="English Language" />English
-					</a>
+							class="lang en" 
+							src="./images/content/svg_icons/lang/en.svg" 
+							alt="English Language" />
+						<p class="m-0 en" data-lang="nav.english">Aγγλικά</p>	
+					</div>
 				</div>
 			</div>
 			
@@ -131,14 +117,14 @@
 	</nav>
 	
 	<section id="contact-page-header" class="py-md-5 py-4">
-		<div class="container">
+		<div class="container" data-lang="contact.header.">
 			<div class="row py-3 text-center">
 				<div class="col">
 					<div class="info-header mb-2">
-						<h1 class="text-yuppii2 pb-3">
+						<h1 class="text-yuppii2 pb-3" data-lang="contact.header.title">
 							Επικοινωνήστε μαζί μας
 						</h1>
-						<p class="lead">
+						<p class="lead" data-lang="contact.header.lead">
 							Συμπληρώστε την παρακάτω φόρμα για να επικοινωνήσετε μαζί μας για πληροφορίες ή ερωτήσεις σχετικά με το Yuppii Luna Park ή για να μας πείτε πώς περάσατε στην πρόσφατη επίσκεψή σας!
 						</p>
 					</div>
@@ -151,46 +137,40 @@
 	
 	<!-- CONTACT SECTION -->
 	<section id="contact" class="py-5">
-		<div class="container">
+		<div class="container" data-lang="contact.form.">
 			<div class="row">
 				
 				<div class="col-md-10 col mx-auto">
 					<div class="card p-md-4 p-0">
 						<div class="card-body p-md-4 px-3">
-							<h3 class="text-center text-yuppii2">
+							<h3 class="text-center text-yuppii2" data-lang="contact.form.title">
 								Συμπληρώστε αυτή τη φόρμα για να επικοινωνήσετε μαζί μας
 							</h3>
 							
 							<hr>
 							
-							<form id="form" action="https://formsubmit.co/chrismits88@gmail.com" method="POST">
-								
+							<form id="yuppii-form">
 								<!-- HoneyPot -->
 								<input type="text" name="_honey" style="display: none;">
 								<!-- Disable Captcha -->
 								<input type="hidden" name="_captcha" value="false">
-								<!-- Display Custom Success Page -->
-								<input type="hidden" name="_next" value="https://yuppii.gr/contact-success.html">
-								<!-- Box email template -->
-								<input type="hidden" name="_template" value="box">
 								
 								<div class="form-group">
 									<div class="input-group input-group-lg">
 										<div class="input-group-prepend">
-											<span class="input-group-text">
+											<span class="input-group-text p-2">
 												<i class="fas fa-user"></i>
 											</span>
 										</div>
 										<input
-											id="name"
 											class="form-control" 
 											type="text" 
-											name="Όνομα"
-											placeholder="Όνομα" />
-										<div class="valid-feedback">
+											name="name"/>
+										<label class="m-0" data-lang="contact.form.name">Όνομα</label>
+										<div class="valid-feedback" data-lang="contact.form.valid">
 											Φαίνεται εντάξει!
 										</div>
-										<div class="invalid-feedback">
+										<div class="invalid-feedback" data-lang="contact.form.nameinvalid">
 											Το όνομα πρέπει να είναι μεταξύ 5-15 χαρακτήρων, χωρίς κενά
 										</div>
 									</div>
@@ -199,20 +179,19 @@
 								<div class="form-group">
 									<div class="input-group input-group-lg">
 										<div class="input-group-prepend">
-											<span class="input-group-text">
+											<span class="input-group-text p-2">
 												<i class="fas fa-envelope"></i>
 											</span>
 										</div>
 										<input
-											id="email"
 											class="form-control" 
 											type="text"
-											name="Email"
-											placeholder="Email" />
-										<div class="valid-feedback">
+											name="email"/>
+										<label class="m-0" data-lang="contact.form.email">Email</label>
+										<div class="valid-feedback" data-lang="contact.form.valid">
 											Φαίνεται εντάξει!
 										</div>
-										<div class="invalid-feedback">
+										<div class="invalid-feedback" data-lang="contact.form.emailinvalid">
 											Εισάγετε μία έγκυρη διεύθυνση email
 										</div>
 									</div>
@@ -221,20 +200,19 @@
 								<div class="form-group">
 									<div class="input-group input-group-lg">
 										<div class="input-group-prepend">
-											<span class="input-group-text">
+											<span class="input-group-text p-2">
 												<i class="fas fa-phone-alt"></i>
 											</span>
 										</div>
 										<input
-											id="phone"
 											class="form-control" 
 											type="text" 
-											name="Αριθμός&nbsp;Κινητού"
-											placeholder="Αριθμός Κινητού" />
-										<div class="valid-feedback">
+											name="phone"/>
+										<label class="m-0" data-lang="contact.form.phone">Αριθμός Κινητού</label>
+										<div class="valid-feedback" data-lang="contact.form.valid">
 											Φαίνεται εντάξει!
 										</div>
-										<div class="invalid-feedback">
+										<div class="invalid-feedback" data-lang="contact.form.phoneinvalid">
 											Εισάγετε έγκυρο αριθμό κινητού τηλεφώνου
 										</div>
 									</div>
@@ -243,16 +221,15 @@
 								<div class="form-group">
 									<div class="input-group input-group-lg">
 										<div class="input-group-prepend">
-											<span class="input-group-text">
+											<span class="input-group-text p-2">
 												<i class="fas fa-pencil-alt"></i>
 											</span>
 										</div>
 										<textarea
-											id="textarea" 
 											class="form-control" 
 											type="text" 
-											name="Μήνυμα"
-											placeholder="Το μήνυμά σας"></textarea>
+											name="message"></textarea>
+										<label class="m-0" data-lang="contact.form.message">Το μήνυμά σας...</label>
 									</div>
 								</div>
 								
@@ -260,8 +237,9 @@
 									id="submit"
 									class="btn btn-yuppii2 btn-block btn-lg mx-auto"
 									type="submit"
-									value="Υποβολή Φόρμας">
-									Υποβολή Φόρμας
+									value="Υποβολή"
+									data-lang="contact.form.submit">
+									Υποβολή
 								</button>
 							
 							</form>
@@ -279,7 +257,7 @@
 	
 	<!-- DIRECTIONS - INFO SECTION -->
 	<section id="directions-info" class="py-5">
-		<div class="container">
+		<div class="container" data-lang="contact.info.">
 			<div class="row">
 				
 				<div class="col-lg-4 mb-resp-map">
@@ -294,10 +272,10 @@
 									<i class="fas fa-map-marker-alt"></i>
 								</div>
 								<div class="d-flex flex-column details">
-									<h4 class="m-0 p-0">
+									<h4 class="m-0 p-0" data-lang="contact.info.loc1">
 										Τοποθεσία
 									</h4>
-									<p class="lead m-0">
+									<p class="lead m-0" data-lang="contact.info.loc2">
 										Κάτω από τον Φάρο Αλεξανδρούπολης
 									</p>
 								</div>
@@ -310,10 +288,10 @@
 									<i class="fas fa-at"></i>
 								</div>
 								<div class="d-flex flex-column details">
-									<h4 class="m-0 p-0">
+									<h4 class="m-0 p-0" data-lang="contact.info.email1">
 										Email
 									</h4>
-									<p class="lead m-0">
+									<p class="lead m-0" data-lang="contact.info.email2">
 										yuppiilunapark@gmail.com
 									</p>
 								</div>
@@ -326,10 +304,10 @@
 									<i class="fas fa-phone"></i>
 								</div>
 								<div class="d-flex flex-column details">
-									<h4 class="m-0 p-0">
+									<h4 class="m-0 p-0" data-lang="contact.info.phone1">
 										Τηλέφωνο
 									</h4>
-									<p class="lead m-0">
+									<p class="lead m-0" data-lang="contact.info.phone2">
 										+306973433980
 									</p>
 								</div>
@@ -357,7 +335,7 @@
 			<div class="row py-3">
 				
 				<div class="col d-flex justify-content-lg-between justify-content-center align-items-center flex-wrap">
-					<h3 class="text-uppercase text-lg-left text-center mb-resp-social mb-0">
+					<h3 class="text-uppercase text-lg-left text-center mb-resp-social mb-0" data-lang="footer.follow">
 						Ακολουθηστε Μας Στα Social Media
 					</h3>
 
@@ -394,26 +372,28 @@
 						src="./images/logos/Yuppii Logo Full Black.svg"
 						alt="Logo" />
 				</div>
+				
+				
 
 				<div class="col-lg-4 d-flex flex-column justify-content-between align-items-lg-start align-items-center text-lg-left text-center mb-resp">
-					<h4 class="text-uppercase m-0">
+					<h4 class="text-uppercase m-0" data-lang="footer.operate1">
 						Λειτουργουμε
 					</h4>
 					<ul class="list-unstyled mb-2 mb-resp">
-						<li>Θερινή Σεζόν</li>
-						<li>Χριστουγεννιάτικη Σεζόν</li>
-						<li>Εθνικές Εορτές</li>
+						<li data-lang="footer.operate2">Θερινή Σεζόν</li>
+						<li data-lang="footer.operate3">Χριστουγεννιάτικη Σεζόν</li>
+						<li data-lang="footer.operate4">Εθνικές Εορτές</li>
 					</ul>
-					<h4 class="text-uppercase m-0">
+					<h4 class="text-uppercase m-0" data-lang="footer.operate5">
 						Ωραριο
 					</h4>
-					<ul class="list-unstyled mb-0">
-						<li>Καθημερινά 6 μ.μ. - 12 π.μ.</li>
+					<ul class="list-unstyled mb-0" data-lang="footer.operate6">
+						<li>Καθημερινά 6μμ - 12πμ</li>
 					</ul>
 				</div>
 				
-				<div class="col-lg-4 d-flex flex-column justify-content-between align-items-lg-start align-items-center text-lg-left text-center weather-col">
-					<h4 class="text-uppercase m-0">
+				<div class="col-lg-4 d-flex flex-column justify-content-between align-items-lg-start align-items-center text-lg-left text-center mb-resp weather-col">
+					<h4 class="text-uppercase m-0" data-lang="footer.operate7">
 						Ο Καιρος
 					</h4>
 					<ul class="list-unstyled mb-0">
@@ -425,8 +405,12 @@
 								<img id="w-icon" class="m-0 ml-1 img-fluid">
 							</li>
 						</div>
-						<li id="w-feels-like"></li>
-						<li id="w-humidity"></li>
+						<li>
+							<span data-lang="footer.operate8">Αίσθηση:</span><span id="w-feels-like"></span>
+						</li>
+						<li>
+							<span data-lang="footer.operate9">Υγρασία:</span><span id="w-humidity"></span>
+						</li>
 					</ul>
 				</div>
 			
@@ -440,45 +424,8 @@
 						&copy; <span id="year"></span> Yuppii Luna Park
 					</h5>
 					<h5 class="mb-0">
-						Website Creation By 
-						<a
-							tabindex="0"
-							role="button"
-							data-html="true"
-							data-toggle="popover"
-							data-trigger="focus"
-							data-placement="top"
-							data-template="
-								<div class='custom popover' role='tooltip'>
-									<div class='arrow'></div>
-									<h3 class='popover-header'></h3>
-									<div class='popover-body'></div>
-								</div>
-							"
-							data-content="
-								<div class='card-body bg-dark text-white m-0 p-1'>
-									<h4 class='card-title m-0 p-0'>
-										<img src='images/mits.webp' alt='Chris Mits' />
-										Γειά σου👋👋
-									</h4>
-									<p class='card-text'>
-										Σου αρέσει αυτό που βλέπεις?<br>
-										Επικοινώνησε μαζί μου
-									</p>
-									<p class='phone m-0 p-0'>
-										<a class='m-0 p-0 text-white' href='mailto:chrismits88@gmail.com' target='_blank'>
-											📧 chrismits88@gmail.com
-										</a>
-									</p>
-									<p class='email m-0 p-0'>
-										<a class='m-0 p-0 text-white' href='tel:+306973993703'>
-											📱 6973993703
-										</a>
-									</p>
-								</div>
-							">
-							Chris Mits
-						</a>
+						Website Creation By
+						<a id="mits-popover" data-toggle="popover" tabindex="0" role="button">Chris Mits</a>
 					</h5>
 				</div>
 			
@@ -486,6 +433,33 @@
 		
 		</div>
 	</footer>
+	
+	<!-- #### FORM MODAL #### -->
+	<div id="form-modal" class="modal fade">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header d-flex justify-content-start align-items-center">
+					<img 
+						class="mr-2"
+						height="20" 
+						src="images/content/svg_icons/send.svg" 
+						alt="Form Submitted" />
+					<h5 class="modal-title">
+						Σας ευχαριστούμε!
+					</h5>
+					<button class="close m-0 ml-auto p-0" data-dismiss="modal">
+						<i class="fas fa-times-circle"></i>
+					</button>
+				</div>
+				<div class="modal-body d-flex flex-column">
+					<i class="fas fa-check-circle"></i>
+					<p class="m-0 text-center lead">
+						Η φόρμα επικοινωνίας απεστάλη!
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	<!-- JQUERY -->
 	<script 

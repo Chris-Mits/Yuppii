@@ -1,68 +1,103 @@
 // FORM VALIDATION
-// Form Keyup Event Listeners
-document.getElementById('name').addEventListener('keyup', validateName);
-document.getElementById('email').addEventListener('keyup', validateEmail);
-document.getElementById('phone').addEventListener('keyup', validatePhone);
+const form = document.querySelector('#yuppii-form');
+const inputFields = document.querySelectorAll('.form-control');
 
 // Name input validaton
-function validateName() {
-	const name = document.getElementById('name');
-	const re = /^[a-zA-Zά-ωΑ-ώ]{5,15}$/;
-	// Evaluation
-	if(!re.test(name.value)) {
-		name.classList.remove('is-valid');
-		name.classList.add('is-invalid');
+export function validateName() {
+	const regexName = /^[a-zA-Zά-ωΑ-ώ]{5,15}$/;
+	
+	if(!regexName.test(form.name.value)) {
+		form.name.classList.remove('is-valid');
+		form.name.classList.add('is-invalid');
 		return false;
-	}
-	else {
-		name.classList.remove('is-invalid');
-		name.classList.add('is-valid');
+	} else {
+		form.name.classList.remove('is-invalid');
+		form.name.classList.add('is-valid');
 		return true;
 	}
 }
 
 // Email input validaton
-function validateEmail() {
-	const email = document.getElementById('email');
-	const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{3})$/;
-	// Evaluation
-	if(!re.test(email.value)) {
-		email.classList.remove('is-valid');
-		email.classList.add('is-invalid');
+export function validateEmail() {
+	const regexEmail = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{3})$/;
+
+	if(!regexEmail.test(form.email.value)) {
+		form.email.classList.remove('is-valid');
+		form.email.classList.add('is-invalid');
 		return false;
-	}
-	else {
-		email.classList.remove('is-invalid');
-		email.classList.add('is-valid');
+	} else {
+		form.email.classList.remove('is-invalid');
+		form.email.classList.add('is-valid');
 		return true;
 	}
 }
 
 // Phone input validaton
-function validatePhone() {
-	const phone = document.getElementById('phone');
-	const re = /^([+][3][0])?([6]{1})([9]{1})([0-9]{8})$/;
-	// Evaluation
-	if(!re.test(phone.value)) {
-		phone.classList.remove('is-valid');
-		phone.classList.add('is-invalid');
+export function validatePhone() {
+	const regexPhone = /^([+][3][0])?([6]{1})([9]{1})([0-9]{8})$/;
+	
+	if(!regexPhone.test(form.phone.value)) {
+		form.phone.classList.remove('is-valid');
+		form.phone.classList.add('is-invalid');
 		return false;
-	}
-	else {
-		phone.classList.remove('is-invalid');
-		phone.classList.add('is-valid');
+	} else {
+		form.phone.classList.remove('is-invalid');
+		form.phone.classList.add('is-valid');
 		return true;
 	}
 }
-
-// Prevent User from Submiting if not validated
-const form = document.getElementById("form");
-form.addEventListener('submit', (e) => {
-	const isNameValid = validateName();
-	const isEmailValid = validateEmail();
-	const isPhoneValid = validatePhone();
-	
-	if(!isNameValid || !isEmailValid || !isPhoneValid) {
+// Form event listener & submission
+if(form) {
+	form.addEventListener('submit', e => {
 		e.preventDefault();
+		
+		const isNameValid = validateName();
+		const isEmailValid = validateEmail();
+		const isPhoneValid = validatePhone();
+		
+		// Prevent User from Submiting if not validated
+		if(!isNameValid || !isEmailValid || !isPhoneValid) {
+			return;
+		} else {
+			fetch("https://formsubmit.co/ajax/chrismits88@gmail.com", {
+				method: "POST",
+				headers: { 
+					'Content-Type': 'application/json',
+					'Accept': 'application/json'
+				},
+				body: JSON.stringify({
+					Όνομα: form.name.value,
+					Email: form.email.value,
+					Τηλέφωνο: form.phone.value,
+					Μήνυμα: form.message.value
+				})
+			}).then(response => response.json())
+				.catch(error => console.log(error));
+			
+			$('#form-modal').modal('show');
+			form.querySelectorAll('input.form-control').forEach(input => input.classList.remove('is-valid'));
+			form.querySelectorAll('label').forEach(label => label.classList.remove('active'));
+			form.reset();
+		}
+	});
+
+	// Form Input Event Listeners
+	form.name.addEventListener('keyup', validateName);
+	form.email.addEventListener('keyup', validateEmail);
+	form.phone.addEventListener('keyup', validatePhone);
+	
+	// Form Labels Event Listeners
+	for(const field of inputFields) {
+		field.addEventListener('focus', () => {
+			if(field.value === '') {
+				field.nextElementSibling.classList.add('active');
+			}
+		});
+		
+		field.addEventListener('blur', () => {
+			if(field.value === '') {
+				field.nextElementSibling.classList.remove('active');
+			}
+		});
 	}
-});
+}

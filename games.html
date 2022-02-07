@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="el">
+<html>
 <head>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,29 +23,17 @@
 	<!-- PHOTOSWIPE CSS -->
 	<link rel="stylesheet" href="css/photoswipe/photoswipe.css" />
 	
+	<!-- SWIPER CSS -->
+	<link rel="stylesheet" href="css/swiper/swiper-bundle-8-0-0.min.css">
+	
 	<!-- MAPBOX CSS -->
-	<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' />
 	
 	<!-- CUSTOM CSS -->
 	<link rel="stylesheet" href="css/style.css" />
 	
-	<!-- MY JS FILE -->
-	<script 
-		defer 
-		type="text/javascript" 
-		src="js/app.js"></script>
-		
-	<!-- TESTIMONIALS JS -->
-	<script 
-		defer 
-		type="text/javascript" 
-		src="js/testimonials.js"></script>
-	
-	<!-- CUSTOM WEATHER API (FOOTER ALL PAGES) -->
-	<script defer src="js/weather/weather.js"></script>
-	<script defer src="js/weather/storage.js"></script>
-	<script defer src="js/weather/ui.js"></script>
-	<script defer src="js/weather/app.js"></script>
+	<!-- CUSTOM JS + MODULES -->
+	<script type="module" src="js/app.js"></script>
 		
 	<!-- MAPBOX API & CUSTOM OPTIONS JS -->
 	<script
@@ -55,9 +43,9 @@
 		defer
 		src="js/mapbox.js"></script>
 	
-	<title>Yuppii Luna Park | Παιχνίδια</title>
+	<title data-lang="tab-title.games">Yuppii Luna Park | Παιχνίδια</title>
 </head>
-<body>
+<body data-lang="games.">
 	<!-- ##### BACK TO TOP BUTTON ##### -->
 	<button id="backToTop" class="backToTop p-2">
 		<i class="fas fa-chevron-up"></i>
@@ -77,25 +65,25 @@
 				class="navbar-toggler"
 				data-toggle="collapse"
 				data-target="#navbarCollapse">
-				<span class="navbar-toggler-icon"></span>
+				<i class="fas fa-bars"></i>
 			</button>
 			
 			<div id="navbarCollapse" class="collapse navbar-collapse">
-				<ul class="navbar-nav ml-auto">
+				<ul class="navbar-nav ml-auto" data-lang="nav.menu">
 					<li class="nav-item mr-lg-1">
-						<a href="index.html" class="nav-link">Αρχική</a>
+						<a href="index.html" class="nav-link" data-lang="nav.home">Αρχική</a>
 					</li>
 					<li class="nav-item mx-lg-1">
-						<a href="park.html" class="nav-link">Το Πάρκο</a>
+						<a href="park.html" class="nav-link" data-lang="nav.park">Πάρκο</a>
 					</li>
 					<li class="nav-item mx-lg-1 active">
-						<a href="games.html" class="nav-link">Παιχνίδια</a>
+						<a href="games.html" class="nav-link" data-lang="nav.games">Παιχνίδια</a>
 					</li>
 					<li class="nav-item mx-lg-1">
-						<a href="services.html" class="nav-link">Παροχές</a>
+						<a href="services.html" class="nav-link" data-lang="nav.services">Παροχές</a>
 					</li>
 					<li class="nav-item mx-lg-1">
-						<a href="contact.html" class="nav-link">Επικοινωνία</a>
+						<a href="contact.html" class="nav-link" data-lang="nav.contact">Επικοινωνία</a>
 					</li>
 				</ul>
 			</div>
@@ -108,40 +96,42 @@
 					data-toggle="dropdown" 
 					aria-expanded="false">
 					<img 
-						class="selected-lang" 
-						src="./images/content/svg_icons/lang/gr.svg" 
-						alt="Language Flag" /> <i class="fas fa-angle-down"></i>
+						class="default-lang" 
+						src="./images/content/svg_icons/lang/el.svg" 
+						alt="Current Language" />
 				</a>
 				
-				<div class="dropdown-menu" aria-labelledby="languages">
-					<a class="dropdown-item" href="#">
+				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="languages">
+					<div class="dropdown-item d-flex align-items-center el-outer">
 						<img 
-							class="lang" 
-							src="./images/content/svg_icons/lang/gr.svg" 
-							alt="Greek Language" />Ελληνικά
-					</a>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="#">
+							class="lang el" 
+							src="./images/content/svg_icons/lang/el.svg" 
+							alt="Greek Language" />
+						<p class="m-0 el" data-lang="nav.greek">Ελληνικά</p>	
+					</div>
+					<div class="dropdown-item d-flex align-items-center en-outer">
 						<img 
-							class="lang" 
-							src="./images/content/svg_icons/lang/gb.svg" 
-							alt="English Language" />English
-					</a>
+							class="lang en" 
+							src="./images/content/svg_icons/lang/en.svg" 
+							alt="English Language" />
+						<p class="m-0 en" data-lang="nav.english">Aγγλικά</p>	
+					</div>
 				</div>
 			</div>
 			
 		</div>
 	</nav>
 	
+	<!-- ##### GAMES SECTION HEADER ##### -->
 	<section id="contact-page-header" class="py-md-5 py-4">
-		<div class="container">
+		<div class="container" data-lang="games.header.">
 			<div class="row py-3 text-center">
 				<div class="col">
 					<div class="info-header mb-2">
-						<h1 class="text-yuppii2 pb-3">
+						<h1 class="text-yuppii2 pb-3" data-lang="games.header.title">
 							Παιχνίδι στο Yuppii
 						</h1>
-						<p class="lead">
+						<p class="lead" data-lang="games.header.lead">
 							Η διασκέδαση στην Αλεξανδρούπολη έχει όνομα και λέγεται Yuppii Luna Park. Με πάνω από 40 μοναδικά και διαφορετικά παιχνίδια από όλο τον κόσμο, μπορεί να φιλοξενήσει όλες τις ηλικίες
 						</p>
 					</div>
@@ -160,7 +150,7 @@
 				href="javascript:void(0)"
 				data-toggle="modal" 
 				data-target="#gameSelection">
-				<span>Επέλεξε Παιχνίδι</span> <i class="fas fa-bars ml-md-2"></i>
+				<span data-lang="games.game-selection-btn">Επέλεξε Παιχνίδι</span> <i class="fas fa-bars ml-md-2"></i>
 			</a>
 			<div class="row">
 				<div class="col">
@@ -173,13 +163,13 @@
 							role="tabpanel" 
 							aria-labelledby="inflatables">
 						
-							<div class="row pb-3">
+							<div class="row pb-3" data-lang="games.inflatables.header.">
 								<div class="col text-center">
-									<h2 class="text-yuppii1">
+									<h2 class="text-yuppii1" data-lang="games.inflatables.header.title">
 										Φουσκωτά
 									</h2>
-									<p class="lead">
-										Ελάτε να παίξουμε, να κάνουμε <span>τσουλήθρα</span> και να σκαρφαλώσουμε στα <span>φουσκωτά</span> μας παιχνίδια! Ένας ατελείωτος φουσκωτός κόσμος. Μια τέλεια εμπειρία
+									<p class="lead" data-lang="games.inflatables.header.lead">
+										Ελάτε να παίξουμε, να κάνουμε τσουλήθρα και να σκαρφαλώσουμε στα φουσκωτά μας παιχνίδια! Ένας ατελείωτος φουσκωτός κόσμος. Μια τέλεια εμπειρία
 									</p>
 								</div>
 							</div>
@@ -295,13 +285,13 @@
 							role="tabpanel" 
 							aria-labelledby="playground">
 							
-							<div class="row pb-3">
+							<div class="row pb-3" data-lang="games.playground.header.">
 								<div class="col text-center">
-									<h2 class="text-yuppii1">
+									<h2 class="text-yuppii1" data-lang="games.playground.header.title">
 										Παιχνιδοκατασκευή
 									</h2>
-									<p class="lead">
-										Ένας τεράστιος <span>παιδότοπος</span>! Τσουλήθρες, τούνελ, λαβύρινθοι, γέφυρες, εμπόδια, λίμνες από μπαλάκια, όλα σε ένα ασφαλές περιβάλλον για τα παιδιά σας, έτοιμα για εξερεύνηση…
+									<p class="lead" data-lang="games.playground.header.lead">
+										Ένας τεράστιος παιδότοπος! Τσουλήθρες, τούνελ, λαβύρινθοι, γέφυρες, εμπόδια, λίμνες από μπαλάκια, όλα σε ένα ασφαλές περιβάλλον για τα παιδιά σας, έτοιμα για εξερεύνηση
 									</p>
 								</div>
 							</div>
@@ -417,13 +407,13 @@
 							role="tabpanel" 
 							aria-labelledby="trampoline">
 							
-							<div class="row pb-3">
+							<div class="row pb-3" data-lang="games.trampoline.header.">
 								<div class="col text-center">
-									<h2 class="text-yuppii1">
+									<h2 class="text-yuppii1" data-lang="games.trampoline.header.title">
 										Τραμπολίνο
 									</h2>
-									<p class="lead">
-									<span>Χοροπηδάς ψηλά</span> μέχρι τον ουρανό, κάνεις φιγούρες και όλοι – γονείς και φίλοι – θα μείνουν με ανοιχτό το στόμα από τα εναέρια κόλπα που κάνεις!
+									<p class="lead" data-lang="games.trampoline.header.lead">
+									Χοροπηδάς ψηλά μέχρι τον ουρανό, κάνεις φιγούρες και όλοι – γονείς και φίλοι – θα μείνουν με ανοιχτό το στόμα από τα εναέρια κόλπα που κάνεις!
 									</p>
 								</div>
 							</div>
@@ -539,14 +529,14 @@
 							role="tabpanel" 
 							aria-labelledby="cinema7d">
 							
-							<div class="row pb-3">
+							<div class="row pb-3" data-lang="games.cinema7d.header.">
 								<div class="col text-center">
-									<h2 class="text-yuppii1">
+									<h2 class="text-yuppii1" data-lang="games.cinema7d.header.title">
 										Σινεμά 7D
 									</h2>
-									<p class="lead">
-										Μέσα στον χώρο του Yuppii Luna Park υπάρχει ένα <span>Cinema</span> που θα ξετρελάνει μικρούς και μεγάλους!!!
-										Σας καλωσορίζουμε στην επόμενη γενιά προβολής ταινιών! Πάρε την παρέα σου και διασκεδάστε βλέποντας αυθεντικές <span>ταινίες</span> με υψηλή ανάλυση και υπέροχα γραφικά…
+									<p class="lead" data-lang="games.cinema7d.header.lead">
+										Μέσα στον χώρο του Yuppii Luna Park υπάρχει ένα Cinema που θα ξετρελάνει μικρούς και μεγάλους!!!
+										Σας καλωσορίζουμε στην επόμενη γενιά προβολής ταινιών! Πάρε την παρέα σου και διασκεδάστε βλέποντας αυθεντικές ταινίες με υψηλή ανάλυση και υπέροχα γραφικά
 									</p>
 								</div>
 							</div>
@@ -662,13 +652,13 @@
 							role="tabpanel" 
 							aria-labelledby="dryslope">
 							
-							<div class="row pb-3">
+							<div class="row pb-3" data-lang="games.dryslope.header.">
 								<div class="col text-center">
-									<h2 class="text-yuppii1">
+									<h2 class="text-yuppii1" data-lang="games.dryslope.header.title">
 										Τσουλήθρα
 									</h2>
-									<p class="lead">
-										Πάρε την ειδική <span>σαμπρέλα</span>, ανέβα ψηλά και νιώσε την αδρεναλίνη να χτυπάει κόκκινο καθώς κατεβαίνεεεεεεις την τσουλήθρα!
+									<p class="lead" data-lang="games.dryslope.header.lead">
+										Πάρε την ειδική σαμπρέλα, ανέβα ψηλά και νιώσε την αδρεναλίνη να χτυπάει κόκκινο καθώς κατεβαίνεεεεεεις την τσουλήθρα!
 									</p>
 								</div>
 							</div>
@@ -784,13 +774,13 @@
 							role="tabpanel" 
 							aria-labelledby="bumpercars">
 							
-							<div class="row pb-3">
+							<div class="row pb-3" data-lang="games.bumpercars.header.">
 								<div class="col text-center">
-									<h2 class="text-yuppii1">
+									<h2 class="text-yuppii1" data-lang="games.bumpercars.header.title">
 										Συγκρουόμενα
 									</h2>
-									<p class="lead">
-										Τα <span>τρακαρίσματα με ασφάλεια</span> είναι το κέφι μικρών και μεγάλων… Διάλεξε το <span>συγκρουόμενο αυτοκίνητο</span> που σου αρέσει και έλα να τρακάρεις τους φίλους σου!
+									<p class="lead" data-lang="games.bumpercars.header.lead">
+										Τα τρακαρίσματα με ασφάλεια είναι το κέφι μικρών και μεγάλων. Διάλεξε το συγκρουόμενο αυτοκίνητο που σου αρέσει και έλα να τρακάρεις τους φίλους σου!
 									</p>
 								</div>
 							</div>
@@ -906,13 +896,13 @@
 							role="tabpanel" 
 							aria-labelledby="junior">
 						
-							<div class="row pb-3">
+							<div class="row pb-3" data-lang="games.junior.header.">
 								<div class="col text-center">
-									<h2 class="text-yuppii1">
+									<h2 class="text-yuppii1" data-lang="games.junior.header.title">
 										Παιδότοπος Junior
 									</h2>
-									<p class="lead">
-										Κούνιες, μπάλες, τσουλήθρες, αυτοκινητάκια και μια μεγάλη λίμνη με μπαλάκια σε έναν <span>ασφαλή παιδότοπο</span> δίπλα στο Café για να διασκεδάζει το παιδί σας, ενώ εσείς απολαμβάνετε τον καφέ ή το φαγητό σας
+									<p class="lead" data-lang="games.junior.header.lead">
+										Κούνιες, μπάλες, τσουλήθρες, αυτοκινητάκια και μια μεγάλη λίμνη με μπαλάκια σε έναν ασφαλή παιδότοπο δίπλα στο Café για να διασκεδάζει το παιδί σας, ενώ εσείς απολαμβάνετε τον καφέ ή το φαγητό σας
 									</p>
 								</div>
 							</div>
@@ -1028,13 +1018,13 @@
 							role="tabpanel" 
 							aria-labelledby="formulacars">
 						
-							<div class="row pb-3">
+							<div class="row pb-3" data-lang="games.formulacars.header.">
 								<div class="col text-center">
-									<h2 class="text-yuppii1">
+									<h2 class="text-yuppii1" data-lang="games.formulacars.header.title">
 										Φόρμουλες
 									</h2>
-									<p class="lead">
-										Ήρθε η ώρα να δείς ποιός είναι ο ποιό <span>γρήγορος</span>! Επέλεξε την <span>φόρμουλά</span> σου και προσπέρασε τους όλους!
+									<p class="lead" data-lang="games.formulacars.header.lead">
+										Ήρθε η ώρα να δείς ποιός είναι ο ποιό γρήγορος! Επέλεξε την φόρμουλά σου και προσπέρασε τους όλους!
 									</p>
 								</div>
 							</div>
@@ -1150,13 +1140,13 @@
 							role="tabpanel" 
 							aria-labelledby="horses">
 							
-							<div class="row pb-3">
+							<div class="row pb-3" data-lang="games.horses.header.">
 								<div class="col text-center">
-									<h2 class="text-yuppii1">
+									<h2 class="text-yuppii1" data-lang="games.horses.header.title">
 										Αλογάκια
 									</h2>
-									<p class="lead">
-										Τα <span>αλογάκια</span> μας είναι κατάλληλα σχεδιασμένα για μικρά και μεγάλα παιδιά. Το παιδί ιππεύει το άλογο σαν να είναι κανονικό και κάνει τη βόλτα του μέσα στο λούνα παρκ μαζί με την παρέα του. Θα το θυμάται για πάντα…
+									<p class="lead" data-lang="games.horses.header.lead">
+										Τα αλογάκια μας είναι κατάλληλα σχεδιασμένα για μικρά και μεγάλα παιδιά. Το παιδί ιππεύει το άλογο σαν να είναι κανονικό και κάνει τη βόλτα του μέσα στο λούνα παρκ μαζί με την παρέα του. Θα το θυμάται για πάντα
 									</p>
 								</div>
 							</div>
@@ -1272,13 +1262,13 @@
 							role="tabpanel" 
 							aria-labelledby="train">
 							
-							<div class="row pb-3">
+							<div class="row pb-3" data-lang="games.train.header.">
 								<div class="col text-center">
-									<h2 class="text-yuppii1">
+									<h2 class="text-yuppii1" data-lang="games.train.header.title">
 										Tρενάκι
 									</h2>
-									<p class="lead">
-										Το <span>τρενάκι</span> πάει βόλτα τους μικρούς μας φίλους… Διάφορα βαγόνια σε <span>ελεγχόμενο σιδηρόδρομο</span> που κάνουν τη βόλτα των παιδιών σας αξέχαστη…
+									<p class="lead" data-lang="games.train.header.lead">
+										Το τρενάκι πάει βόλτα τους μικρούς μας φίλους… Διάφορα βαγόνια σε ελεγχόμενο σιδηρόδρομο που κάνουν τη βόλτα των παιδιών σας αξέχαστη
 									</p>
 								</div>
 							</div>
@@ -1394,13 +1384,13 @@
 							role="tabpanel" 
 							aria-labelledby="cranes">
 						
-							<div class="row pb-3">
+							<div class="row pb-3" data-lang="games.cranes.header.">
 								<div class="col text-center">
-									<h2 class="text-yuppii1">
+									<h2 class="text-yuppii1" data-lang="games.cranes.header.title">
 										Γερανοί
 									</h2>
-									<p class="lead">
-										Το πρώτο <span>under construction</span> θεματικό πάρκο στην Ελλάδα σε περιμένει στο Yuppii…
+									<p class="lead" data-lang="games.cranes.header.lead">
+										Το πρώτο under construction θεματικό πάρκο στην Ελλάδα σε περιμένει στο Yuppii!
 									</p>
 								</div>
 							</div>
@@ -1516,13 +1506,13 @@
 							role="tabpanel" 
 							aria-labelledby="carnivalgames">
 					
-							<div class="row pb-3">
+							<div class="row pb-3" data-lang="games.carnivalgames.header.">
 								<div class="col text-center">
-									<h2 class="text-yuppii1">
+									<h2 class="text-yuppii1" data-lang="games.carnivalgames.header.title">
 										Carnival Games
 									</h2>
-									<p class="lead">
-										Είσαι έτοιμος/η να <span>“ψαρέψεις”</span> και να <span>"στοχεύσεις"</span> το καλύτερο δωράκι; Η τύχη είναι με το μέρος σου!
+									<p class="lead" data-lang="games.carnivalgames.header.lead">
+										Είσαι έτοιμος/η να “ψαρέψεις” και να "στοχεύσεις" το καλύτερο δωράκι; Η τύχη είναι με το μέρος σου!
 									</p>
 								</div>
 							</div>
@@ -1638,13 +1628,13 @@
 							role="tabpanel" 
 							aria-labelledby="tablesoccer">
 							
-							<div class="row pb-3">
+							<div class="row pb-3" data-lang="games.tablesoccer.header.">
 								<div class="col text-center">
-									<h2 class="text-yuppii1">
+									<h2 class="text-yuppii1" data-lang="games.tablesoccer.header.title">
 										Ποδοσφαιράκια
 									</h2>
-									<p class="lead">
-										Τα ξύλινα <span>ποδοσφαιράκια</span> που διασκέδασαν γενιές και γενιές δεν θα μπορούσαν να λείπουν από το πάρκο μας…
+									<p class="lead" data-lang="games.tablesoccer.header.lead">
+										Τα ξύλινα ποδοσφαιράκια που διασκέδασαν γενιές και γενιές δεν θα μπορούσαν να λείπουν από το πάρκο μας
 									</p>
 								</div>
 							</div>
@@ -1760,13 +1750,13 @@
 							role="tabpanel" 
 							aria-labelledby="basket">
 						
-							<div class="row pb-3">
+							<div class="row pb-3" data-lang="games.basket.header.">
 								<div class="col text-center">
-									<h2 class="text-yuppii1">
+									<h2 class="text-yuppii1" data-lang="games.basket.header.title">
 										Μπάσκετ
 									</h2>
-									<p class="lead">
-										Διάλεξε <span>μπάλα</span> και ξεκίνα να <span>σουτάρεις</span>! Ποιός ξέρει, μπορεί κάποιος προπονητής να δει το ταλέντο σου και να σε πάρει στην ομάδα του…
+									<p class="lead" data-lang="games.basket.header.lead">
+										Διάλεξε μπάλα και ξεκίνα να σουτάρεις! Ποιός ξέρει, μπορεί κάποιος προπονητής να δει το ταλέντο σου και να σε πάρει στην ομάδα του!
 									</p>
 								</div>
 							</div>
@@ -1882,13 +1872,13 @@
 							role="tabpanel" 
 							aria-labelledby="kiddyrides">
 						
-							<div class="row pb-3">
+							<div class="row pb-3" data-lang="games.kiddyrides.header.">
 								<div class="col text-center">
-									<h2 class="text-yuppii1">
+									<h2 class="text-yuppii1" data-lang="games.kiddyrides.header.title">
 										Κουνιστά
 									</h2>
-									<p class="lead">
-										Κουνιστά <span>αμαξάκια, carousel, άλογα, κούπες και γορίλες</span> σε διάφορα χρώματα και σχέδια που θα ξετρελάνουν τους μικρούς μας φίλους.
+									<p class="lead" data-lang="games.kiddyrides.header.lead">
+										Κουνιστά αμαξάκια, carousel, άλογα, κούπες και γορίλες σε διάφορα χρώματα και σχέδια που θα ξετρελάνουν τους μικρούς μας φίλους
 									</p>
 								</div>
 							</div>
@@ -2004,13 +1994,13 @@
 							role="tabpanel" 
 							aria-labelledby="simulators">
 							
-							<div class="row pb-3">
+							<div class="row pb-3" data-lang="games.simulators.header.">
 								<div class="col text-center">
-									<h2 class="text-yuppii1">
+									<h2 class="text-yuppii1" data-lang="games.simulators.header.title">
 										Προσομοιωτές 
 									</h2>
-									<p class="lead">
-									<span>Σημάδεψε</span> καλά με το νερό τον Nemo, <span>πέτυχε</span> τα ψαράκια ή <span>προσπέρασε</span> τον αντίπαλο σου! Πέτυχε τον στόχο σου για να παίξεις και στις επόμενες πίστες!
+									<p class="lead" data-lang="games.simulators.header.lead">
+										Σημάδεψε καλά με το νερό τον Nemo, πέτυχε τα ψαράκια ή προσπέρασε τον αντίπαλο σου! Πέτυχε τον στόχο σου για να παίξεις και στις επόμενες πίστες!
 									</p>
 								</div>
 							</div>
@@ -2128,45 +2118,247 @@
 	<section class="section-connector-pink-to-green py-3"></section>
 	
 	<section id="testimonials" class="py-5">
-		<div class="container">
+		<div class="container" data-lang="games.testimonials.header.">
+			
 			<div class="col text-center">
-				<div class="info-header mb-2">
-					<h1 class="text-yuppii2 pb-3">
+				<div class="info-header mb-5">
+					<h1 class="text-yuppii2 pb-3" data-lang="games.testimonials.header.title">
 						Τα σχόλιά σας
 					</h1>
-					<p class="lead">
+					<p class="lead" data-lang="games.testimonials.header.lead">
 						To Yuppii Luna Park έχει φιλοξενήσει χιλιάδες μικρούς αλλά και μεγάλους φίλους. Δείτε μερικά απο τα σχόλια τους! 
 					</p>
 				</div>
 			</div>
-			<div class="col pb-2">
-				<div class="testimonial-container">
-					<div class="custom-progress-bar"></div>
-					<div class="fas fa-quote-right fa-quote"></div>
-					<div class="fas fa-quote-left fa-quote"></div>
-					<p class="testimonial lead">
-						Είναι υπέροχος χώρος, εκπληκτική εξυπηρέτηση ευγενεστατο προσωπικό,οι κοπέλες στον παιδότοπο απίστευτες με όλα τα παιδιά η μικρή μου τις αγαπά πολύ. Xάρηκα πολύ γιατί έχει ως γνώμονα να περνούν καλά τα παιδιά και οι γονείς. Ώρα για παιχνίδι!!!
-					</p>
-					<div class="user">
-						<img
-							loading="lazy" 
-							class="user-image"
-							src="images/content/testimonial_users/elena_m.png" 
-							alt="Elena M" />
-						<div class="user-details">
-							<h4 class="username">Elena M</h4>
+		
+		
+			<div class="col testimonials">
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						
+						<!-- Slide 1 -->
+						<div class="swiper-slide">
+							<img 
+								class="next-card d-block d-md-none" 
+								src="images/content/svg_icons/rotateleft.svg" 
+								alt="Next Card" />
+							
+							<div class="user d-flex justify-content-center align-items-center">
+								<img
+									loading="lazy" 
+									class="user-image"
+									src="images/content/testimonial_users/elena_m.png" />
+								<div class="user-details">
+									<h5 class="username">Elena M</h5>
+								</div>
+							</div>
+							<p class="testimonial mb-0" data-lang="games.testimonials.testimonial1">
+								Είναι υπέροχος χώρος, εκπληκτική εξυπηρέτηση ευγενεστατο προσωπικό, οι κοπέλες στον παιδότοπο απίστευτες με όλα τα παιδιά η μικρή μου τις αγαπά πολύ. Ένα πάρκο με γνώμονα να περνούν καλά τα παιδιά και οι γονείς!
+							</p>
 						</div>
-					</div>
-					<div class="google-reviews">
-						<a 
-							href="https://www.google.gr/travel/entity/key/ChkIgI-npY7cwc1BGg0vZy8xMWJ3NDB3OXJ0EAQ?hl=en&amp;gl=gr&amp;gsas=1&amp;sa=X&amp;utm_campaign=sharing&amp;utm_medium=link&amp;utm_source=htls&amp;ts=CAESABoGCgIaABIAKgQKABoA&amp;rp=SAI&amp;ap=MAA&amp;ei=J7ofYci_K--AlsYPstGCqAk&amp;ved=0CAAQ5JsGahcKEwiA0tOA35L0AhUAAAAAHQAAAAAQAw" 
-							target="_blank">
-							<img loading="lazy" src="./images/content/svg_icons/GoogleReviews.svg" alt="Reviews">
-						</a>
+						
+						<!-- Slide 2 -->
+						<div class="swiper-slide">
+							<img 
+								class="prev-card d-block d-md-none" 
+								src="images/content/svg_icons/rotateright.svg" 
+								alt="Previous Card" />
+							<img 
+								class="next-card d-block d-md-none" 
+								src="images/content/svg_icons/rotateleft.svg" 
+								alt="Next Card" />
+								
+							<div class="user d-flex justify-content-center align-items-center">
+								<img
+									loading="lazy" 
+									class="user-image"
+									src="images/content/testimonial_users/olga_politi.png" />
+								<div class="user-details">
+									<h5 class="username">Όλγα Πολίτη</h5>
+								</div>
+							</div>
+							<p class="testimonial mb-0" data-lang="games.testimonials.testimonial2">
+								Πάρα πολύ καλό Λούνα Παρκ όπου μπορείς να βρείς τα πάντα! Μέχρι και θάλαμο εικονικής πραγματικότητας με καρέκλες που περιστρέφονται αναλόγως το θέμα που βλέπεις με τα γυαλιά 3D! Οι τιμές είναι φυσιολογικές.
+							</p>
+						</div>
+						
+						<!-- Slide 3 -->
+						<div class="swiper-slide">
+							<img 
+								class="prev-card d-block d-md-none" 
+								src="images/content/svg_icons/rotateright.svg" 
+								alt="Previous Card" />
+							<img 
+								class="next-card d-block d-md-none" 
+								src="images/content/svg_icons/rotateleft.svg" 
+								alt="Next Card" />
+								
+							<div class="user d-flex justify-content-center align-items-center">
+								<img
+									loading="lazy" 
+									class="user-image"
+									src="images/content/testimonial_users/petros_kilamenakis.png" />
+								<div class="user-details">
+									<h5 class="username">Petros Kilamenakis</h5>
+								</div>
+							</div>
+							<p class="testimonial mb-0" data-lang="games.testimonials.testimonial3">
+								Ωραία σχεδιασμένος και φιλικός προς τα παιδιά χώρος! Υπάρχουν δραστηριότητες που σπανίζουν ακόμα και στα μεγάλα αστικά κέντρα! Φιλικό και εξυπηρετικό προσωπικό με προτεραιότητα στην ασφάλεια κατά την διασκέδαση!
+							</p>
+						</div>
+						
+						<!-- Slide 4 -->
+						<div class="swiper-slide">
+							<img 
+								class="prev-card d-block d-md-none" 
+								src="images/content/svg_icons/rotateright.svg" 
+								alt="Previous Card" />
+							<img 
+								class="next-card d-block d-md-none" 
+								src="images/content/svg_icons/rotateleft.svg" 
+								alt="Next Card" />
+								
+							<div class="user d-flex justify-content-center align-items-center">
+								<img
+									loading="lazy" 
+									class="user-image"
+									src="images/content/testimonial_users/zoe_bah.png" />
+								<div class="user-details">
+									<h5 class="username">Zoe Bah</h5>
+								</div>
+							</div>
+							<p class="testimonial mb-0" data-lang="games.testimonials.testimonial4">
+								Μεγάλος χώρος με αρκετά παιχνίδια για τα παιδιά,ανάλογα με την ηλικία τους. Έχει μεγάλα φουσκωτά για τα μικρότερα. Οι τιμές φυσιολογικές για Λούνα Πάρκ.
+							</p>
+						</div>
+						
+						<!-- Slide 5 -->
+						<div class="swiper-slide">
+							<img 
+								class="prev-card d-block d-md-none" 
+								src="images/content/svg_icons/rotateright.svg" 
+								alt="Previous Card" />
+							<img 
+								class="next-card d-block d-md-none" 
+								src="images/content/svg_icons/rotateleft.svg" 
+								alt="Next Card" />
+								
+							<div class="user d-flex justify-content-center align-items-center">
+								<img
+									loading="lazy" 
+									class="user-image"
+									src="images/content/testimonial_users/iosif_darousis.png" />
+								<div class="user-details">
+									<h5 class="username">Iosif Darousis</h5>
+								</div>
+							</div>
+							<p class="testimonial mb-0" data-lang="games.testimonials.testimonial5">
+								Προσιτές τιμές, πολύ εξυπηρετικό προσωπικό, ευγενικό και ευχάριστο! Μεγάλη ποικιλία δραστηριοτήτων και παιχνιδιών, το συνιστώ ανεπιφύλακτα!
+							</p>
+						</div>
+						
+						<!-- Slide 6 -->
+						<div class="swiper-slide">
+							<img 
+								class="prev-card d-block d-md-none" 
+								src="images/content/svg_icons/rotateright.svg" 
+								alt="Previous Card" />
+							<img 
+								class="next-card d-block d-md-none" 
+								src="images/content/svg_icons/rotateleft.svg" 
+								alt="Next Card" />
+								
+							<div class="user d-flex justify-content-center align-items-center">
+								<img
+									loading="lazy" 
+									class="user-image"
+									src="images/content/testimonial_users/stella_daviti.png" />
+								<div class="user-details">
+									<h5 class="username">Stella Daviti</h5>
+								</div>
+							</div>
+							<p class="testimonial mb-0" data-lang="games.testimonials.testimonial6">
+								Ωραίο πάρκο, για παιδιά κάτω των 10 ετών και όχι μόνο. Πολύ μεγάλος αριθμός προσωπικού για να είστε ήσυχοι με τα παιδιά σας.
+							</p>
+						</div>
+						
+						<!-- Slide 7 -->
+						<div class="swiper-slide">
+							<img 
+								class="prev-card d-block d-md-none" 
+								src="images/content/svg_icons/rotateright.svg" 
+								alt="Previous Card" />
+							<img 
+								class="next-card d-block d-md-none" 
+								src="images/content/svg_icons/rotateleft.svg" 
+								alt="Next Card" />
+								
+							<div class="user d-flex justify-content-center align-items-center">
+								<img
+									loading="lazy" 
+									class="user-image"
+									src="images/content/testimonial_users/mpampis_papagewrgiou.png" />
+								<div class="user-details">
+									<h5 class="username">Μ. Παπαγεωργίου</h5>
+								</div>
+							</div>
+							<p class="testimonial mb-0" data-lang="games.testimonials.testimonial7">
+								Ένα πολύ καλό μέρος για να χαλαρώσεις όσο τα παιδιά σου θα εξαντλούνται! Μην σου πω ότι θα μπεις στον πειρασμό να γίνεις και συ παιδί..!!
+							</p>
+						</div>
+						
+						<!-- Slide 8 -->
+						<div class="swiper-slide">
+							<img 
+								class="prev-card d-block d-md-none" 
+								src="images/content/svg_icons/rotateright.svg" 
+								alt="Previous Card" />
+							<img 
+								class="next-card d-block d-md-none" 
+								src="images/content/svg_icons/rotateleft.svg" 
+								alt="Next Card" />
+								
+							<div class="user d-flex justify-content-center align-items-center">
+								<img
+									loading="lazy" 
+									class="user-image"
+									src="images/content/testimonial_users/kiriakos_xatz.png" />
+								<div class="user-details">
+									<h5 class="username">Kyriakos Xatz</h5>
+								</div>
+							</div>
+							<p class="testimonial mb-0" data-lang="games.testimonials.testimonial8">
+								Χαρά καί διασκέδαση, πολύ καλό μέρος γιά ξεφάντωμα! Ένας υπέροχος παιδότοπος στην καρδιά της πόλης δίπλα στην θάλασσα!
+							</p>
+						</div>
+						
+						<!-- Slide 9 -->
+						<div class="swiper-slide">
+							<img 
+								class="prev-card d-block d-md-none" 
+								src="images/content/svg_icons/rotateright.svg" 
+								alt="Previous Card" />
+								
+							<div class="user d-flex justify-content-center align-items-center">
+								<img
+									loading="lazy" 
+									class="user-image"
+									src="images/content/testimonial_users/dimsideris.png" />
+								<div class="user-details">
+									<h5 class="username">Dimsideris</h5>
+								</div>
+							</div>
+							<p class="testimonial mb-0" data-lang="games.testimonials.testimonial9">
+								Εξαιρετική τοποθεσία με πολλά παιχνίδια για μικρούς και μεγάλους. Ευγενικό και φιλικό προσωπικό και χαμηλές τιμές στα παιχνίδα και τις δραστηριότητες!
+							</p>
+						</div>
+					
 					</div>
 				</div>
 			</div>
+		
 		</div>
+		
 	</section>
 	
 	<section class="section-connector-green-to-pink2 py-3"></section>
@@ -2179,7 +2371,7 @@
 			<div class="row py-3">
 				
 				<div class="col d-flex justify-content-lg-between justify-content-center align-items-center flex-wrap">
-					<h3 class="text-uppercase text-lg-left text-center mb-resp-social mb-0">
+					<h3 class="text-uppercase text-lg-left text-center mb-resp-social mb-0" data-lang="footer.follow">
 						Ακολουθηστε Μας Στα Social Media
 					</h3>
 
@@ -2218,24 +2410,24 @@
 				</div>
 
 				<div class="col-lg-3 d-flex flex-column justify-content-between align-items-lg-start align-items-center text-lg-left text-center mb-resp">
-					<h4 class="text-uppercase m-0">
+					<h4 class="text-uppercase m-0" data-lang="footer.operate1">
 						Λειτουργουμε
 					</h4>
 					<ul class="list-unstyled mb-2 mb-resp">
-						<li>Θερινή Σεζόν</li>
-						<li>Χριστουγεννιάτικη Σεζόν</li>
-						<li>Εθνικές Εορτές</li>
+						<li data-lang="footer.operate2">Θερινή Σεζόν</li>
+						<li data-lang="footer.operate3">Χριστουγεννιάτικη Σεζόν</li>
+						<li data-lang="footer.operate4">Εθνικές Εορτές</li>
 					</ul>
-					<h4 class="text-uppercase m-0">
+					<h4 class="text-uppercase m-0" data-lang="footer.operate5">
 						Ωραριο
 					</h4>
-					<ul class="list-unstyled mb-0">
-						<li>Καθημερινά 6 μ.μ. - 12 π.μ.</li>
+					<ul class="list-unstyled mb-0" data-lang="footer.operate6">
+						<li>Καθημερινά 6μμ - 12πμ</li>
 					</ul>
 				</div>
 				
-				<div class="col-lg-2 d-flex flex-column justify-content-between align-items-lg-start align-items-center text-lg-left text-center mb-resp weather-col">
-					<h4 class="text-uppercase m-0">
+				<div class="col-lg-3 d-flex flex-column justify-content-between align-items-lg-start align-items-center text-lg-left text-center mb-resp weather-col">
+					<h4 class="text-uppercase m-0" data-lang="footer.operate7">
 						Ο Καιρος
 					</h4>
 					<ul class="list-unstyled mb-0">
@@ -2247,17 +2439,21 @@
 								<img id="w-icon" class="m-0 ml-1 img-fluid">
 							</li>
 						</div>
-						<li id="w-feels-like"></li>
-						<li id="w-humidity"></li>
+						<li>
+							<span data-lang="footer.operate8">Αίσθηση:</span><span id="w-feels-like"></span>
+						</li>
+						<li>
+							<span data-lang="footer.operate9">Υγρασία:</span><span id="w-humidity"></span>
+						</li>
 					</ul>
 				</div>
 				
-				<div class="col-lg-5 d-flex flex-column justify-content-between align-items-lg-start align-items-center text-lg-left text-center map-col">
-					<h4 class="text-uppercase m-0">
-						Θα Μας Βρειτε
+				<div class="col-lg-4 d-flex flex-column justify-content-between align-items-lg-start align-items-center text-lg-left text-center map-col">
+					<h4 class="text-uppercase m-0" data-lang="footer.operate10">
+						Τοποθεσία
 					</h4>
 					<ul class="list-unstyled mb-0">
-						<li>Κάτω απο τον Φάρο Αλεξανδρούπολης</li>
+						<li data-lang="footer.operate11">Κάτω απο τον Φάρο Αλεξανδρούπολης</li>
 					</ul>
 					<div id="footer-map"></div>
 				</div>
@@ -2272,45 +2468,8 @@
 						&copy; <span id="year"></span> Yuppii Luna Park
 					</h5>
 					<h5 class="mb-0">
-						Website Creation By 
-						<a
-							tabindex="0"
-							role="button"
-							data-html="true"
-							data-toggle="popover"
-							data-trigger="focus"
-							data-placement="top"
-							data-template="
-								<div class='custom popover' role='tooltip'>
-									<div class='arrow'></div>
-									<h3 class='popover-header'></h3>
-									<div class='popover-body'></div>
-								</div>
-							"
-							data-content="
-								<div class='card-body bg-dark text-white m-0 p-1'>
-									<h4 class='card-title m-0 p-0'>
-										<img src='images/mits.webp' alt='Chris Mits' />
-										Γειά σου👋👋
-									</h4>
-									<p class='card-text'>
-										Σου αρέσει αυτό που βλέπεις?<br>
-										Επικοινώνησε μαζί μου
-									</p>
-									<p class='phone m-0 p-0'>
-										<a class='m-0 p-0 text-white' href='mailto:chrismits88@gmail.com' target='_blank'>
-											📧 chrismits88@gmail.com
-										</a>
-									</p>
-									<p class='email m-0 p-0'>
-										<a class='m-0 p-0 text-white' href='tel:+306973993703'>
-											📱 6973993703
-										</a>
-									</p>
-								</div>
-							">
-							Chris Mits
-						</a>
+						Website Creation By
+						<a id="mits-popover" data-toggle="popover" tabindex="0" role="button">Chris Mits</a>
 					</h5>
 				</div>
 			
@@ -2320,17 +2479,21 @@
 	</footer>
 	
 	<!-- ##### MODALS ##### -->
-	<div id="gameSelection" class="modal fade">
+	<div id="gameSelection" class="modal fade" data-lang="games.game-selection-pills.">
 		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h3 class="modal-title">
-						<i class="fas fa-exclamation-circle"></i> Επέλεξε παιχνίδι από την λίστα
+						<i class="fas fa-exclamation-circle"></i> <span data-lang="games.game-selection-pills.title">Επέλεξε παιχνίδι από την λίστα</span>
 					</h3>
 					<button class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<div class="modal-body lead">
-					<div id="v-pills-tab" class="nav flex-column nav-pills text-center" role="tablist" aria-orientation="vertical">
+					<div 
+						id="v-pills-tab" 
+						class="nav flex-column nav-pills text-center" 
+						role="tablist" 
+						aria-orientation="vertical">
 						<a 
 							id="inflatables" 
 							class="nav-link active" 
@@ -2338,7 +2501,7 @@
 							href="#inflatables" 
 							role="tab"
 							aria-selected="true"
-							onclick="closeModal()">
+							data-lang="games.game-selection-pills.inflatables">
 							Φουσκωτά
 						</a>
 						<a 
@@ -2348,7 +2511,7 @@
 							href="#playground" 
 							role="tab" 
 							aria-selected="false"
-							onclick="closeModal()">
+							data-lang="games.game-selection-pills.playground">
 							Παιχνιδοκατασκευή
 						</a>
 						<a 
@@ -2358,7 +2521,7 @@
 							href="#trampoline" 
 							role="tab" 
 							aria-selected="false"
-							onclick="closeModal()">
+							data-lang="games.game-selection-pills.trampoline">
 							Τραμπολίνο
 						</a>
 						<a 
@@ -2368,7 +2531,7 @@
 							href="#cinema7d" 
 							role="tab" 
 							aria-selected="false"
-							onclick="closeModal()">
+							data-lang="games.game-selection-pills.cinema7d">
 							Σινεμά 7D
 						</a>
 						<a 
@@ -2378,7 +2541,7 @@
 							href="#dryslope" 
 							role="tab" 
 							aria-selected="false"
-							onclick="closeModal()">
+							data-lang="games.game-selection-pills.dryslope">
 							Τσουλήθρα
 						</a>
 						<a 
@@ -2388,7 +2551,7 @@
 							href="#bumpercars" 
 							role="tab" 
 							aria-selected="false"
-							onclick="closeModal()">
+							data-lang="games.game-selection-pills.bumpercars">
 							Συγκρουόμενα
 						</a>
 						<a 
@@ -2398,7 +2561,7 @@
 							href="#junior" 
 							role="tab" 
 							aria-selected="false"
-							onclick="closeModal()">
+							data-lang="games.game-selection-pills.junior">
 							Παιδότοπος Junior
 						</a>
 						<a 
@@ -2408,7 +2571,7 @@
 							href="#formulacars" 
 							role="tab" 
 							aria-selected="false"
-							onclick="closeModal()">
+							data-lang="games.game-selection-pills.formulacars">
 							Φόρμουλες
 						</a>
 						<a 
@@ -2418,7 +2581,7 @@
 							href="#horses" 
 							role="tab" 
 							aria-selected="false"
-							onclick="closeModal()">
+							data-lang="games.game-selection-pills.horses">
 							Αλογάκια
 						</a>
 						<a 
@@ -2428,7 +2591,7 @@
 							href="#train" 
 							role="tab" 
 							aria-selected="false"
-							onclick="closeModal()">
+							data-lang="games.game-selection-pills.train">
 							Τρενάκι
 						</a>
 						<a 
@@ -2438,7 +2601,7 @@
 							href="#cranes" 
 							role="tab" 
 							aria-selected="false"
-							onclick="closeModal()">
+							data-lang="games.game-selection-pills.cranes">
 							Γερανοί
 						</a>
 						<a 
@@ -2448,7 +2611,7 @@
 							href="#carnivalgames" 
 							role="tab" 
 							aria-selected="false"
-							onclick="closeModal()">
+							data-lang="games.game-selection-pills.carnivalgames">
 							Carnival Games
 						</a>
 						<a 
@@ -2458,7 +2621,7 @@
 							href="#tablesoccer" 
 							role="tab" 
 							aria-selected="false"
-							onclick="closeModal()">
+							data-lang="games.game-selection-pills.tablesoccer">
 							Ποδοσφαιράκια
 						</a>
 						<a 
@@ -2468,7 +2631,7 @@
 							href="#basket" 
 							role="tab" 
 							aria-selected="false"
-							onclick="closeModal()">
+							data-lang="games.game-selection-pills.basket">
 							Μπάσκετ
 						</a>
 						<a 
@@ -2478,7 +2641,7 @@
 							href="#kiddyrides" 
 							role="tab" 
 							aria-selected="false"
-							onclick="closeModal()">
+							data-lang="games.game-selection-pills.kiddyrides">
 							Κουνιστά
 						</a>
 						<a 
@@ -2488,7 +2651,7 @@
 							href="#simulators" 
 							role="tab" 
 							aria-selected="false"
-							onclick="closeModal()">
+							data-lang="games.game-selection-pills.simulators">
 							Προσομοιωτές
 						</a>
 					</div>
@@ -2514,35 +2677,5 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" 
 		integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" 
 		crossorigin="anonymous"></script>
-	
-	<!-- PHOTOSWIPE MODULE IMPORT & OPTIONS -->
-	<script type="module">
-		import PhotoSwipeLightbox from '/js/photoswipe/photoswipe-lightbox.esm.js';
-		
-		const closeBtnSVGString = `
-		<svg aria-hidden="true" class="pswp__icn" width="30" height="30" viewBox="0 0 30 30" fill="none">
-			<path d="M15.0103 0C11.0017 0 7.23316 1.56027 4.39874 4.39336C-1.45255 10.2418 -1.45255 19.758 4.39856 25.6065C7.23298 28.4397 11.0017 30 15.0103 30C19.0187 30 22.7874 28.4397 25.6218 25.6065C31.4731 19.758 31.4731 10.2418 25.6218 4.39336C22.7874 1.56027 19.0187 0 15.0103 0ZM21.7631 21.7495C21.4966 22.0158 21.1475 22.149 20.7983 22.149C20.4493 22.149 20.1 22.0158 19.8338 21.7495L15.0103 16.9285L10.1868 21.7496C9.92033 22.0159 9.57126 22.1491 9.2221 22.1491C8.87302 22.1491 8.52377 22.0159 8.25755 21.7496C7.72467 21.2172 7.72467 20.3537 8.25755 19.8212L13.0809 15L8.25746 10.1788C7.72458 9.64636 7.72458 8.78291 8.25746 8.25036C8.79017 7.71791 9.65403 7.71791 10.1868 8.25036L15.0103 13.0715L19.8335 8.25036C20.3662 7.71791 21.2301 7.71791 21.7629 8.25036C22.2958 8.78282 22.2958 9.64627 21.7629 10.1788L16.9396 15L21.7631 19.8211C22.2959 20.3536 22.2959 21.2171 21.7631 21.7495Z" fill="#F2788F"/>
-		</svg>`;
-		
-		const zoomBtnSVGString = `
-		<svg aria-hidden="true" class="pswp__icn" width="30" height="30" viewBox="0 0 30 30" fill="none">
-			<path d="M13.9416 9.61963C11.6742 9.61963 9.83594 11.4585 9.83594 13.7259C9.83594 15.9937 11.6742 17.8321 13.9416 17.8321C16.2094 17.8321 18.0475 15.9938 18.0475 13.7259C18.0476 11.4585 16.2096 9.61963 13.9416 9.61963ZM15.9257 14.6975H14.7197V15.9035C14.7197 16.3333 14.3714 16.6816 13.9416 16.6816C13.5118 16.6816 13.1635 16.3333 13.1635 15.9035V14.6975H11.9575C11.5276 14.6975 11.1793 14.3492 11.1793 13.9194C11.1793 13.4896 11.5276 13.1413 11.9575 13.1413H13.1635V11.9349C13.1635 11.5051 13.5118 11.1568 13.9416 11.1568C14.3714 11.1568 14.7197 11.5051 14.7197 11.9349V13.1413H15.9257C16.3555 13.1413 16.7038 13.4896 16.7038 13.9194C16.7038 14.3492 16.3557 14.6975 15.9257 14.6975Z" fill="#72CBC2"/>
-			<path d="M15.0007 0C6.71662 0 0.000976562 6.71584 0.000976562 14.9996C0.000976562 23.2834 6.71662 30 15.0006 30C23.2845 30 30.0007 23.2837 30.0007 14.9996C30.0007 6.71555 23.2846 0 15.0007 0ZM22.5448 22.1255C22.3077 22.3632 21.9968 22.4817 21.6858 22.4817C21.3748 22.4817 21.0641 22.3632 20.8265 22.1255L17.412 18.7108C16.4283 19.3971 15.2326 19.8004 13.9423 19.8004C10.5874 19.8004 7.86803 17.0808 7.86803 13.726C7.86803 10.3712 10.5874 7.65175 13.9423 7.65175C17.2971 7.65175 20.0167 10.3712 20.0167 13.7257C20.0167 14.9112 19.6759 16.0166 19.0887 16.9513L22.5447 20.4075C23.0195 20.8818 23.0195 21.6513 22.5448 22.1255Z" fill="#72CBC2"/>
-		</svg>`;
-		
-		const options = {
-			closeSVG: closeBtnSVGString,
-			zoomSVG: zoomBtnSVGString,
-			gallery: '.tab-pane',
-			children: 'a',
-			pswpModule: '/js/photoswipe/photoswipe.esm.js',
-			arrowKeys: true,
-			loop: false
-		};
-		
-		const lightbox = new PhotoSwipeLightbox(options);
-		lightbox.init();
-		
-	</script>
 </body>
 </html>
