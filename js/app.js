@@ -302,7 +302,7 @@ const mokalisOptions = {
 	content: `
 		<p class='pop-phone'>
 			<a href='tel:+306973433980'>
-				<span><i class='fas fa-mobile-alt'></i></span>+306973993703
+				<span><i class='fas fa-mobile-alt'></i></span>+306973433980
 			</a>
 		</p>
 	`
